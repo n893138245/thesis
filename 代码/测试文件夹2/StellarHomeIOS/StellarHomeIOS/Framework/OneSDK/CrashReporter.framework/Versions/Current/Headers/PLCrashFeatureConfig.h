@@ -1,0 +1,23 @@
+#ifndef PLCRASH_FEATURE_CONFIG_H
+#define PLCRASH_FEATURE_CONFIG_H
+#include <TargetConditionals.h>
+#ifdef PLCF_RELEASE_BUILD
+#  if defined(__arm__)
+#    ifndef PLCRASH_FEATURE_UNWIND_DWARF
+#      define PLCRASH_FEATURE_UNWIND_DWARF 0
+#    endif
+#    ifndef PLCRASH_FEATURE_UNWIND_COMPACT
+#      define PLCRASH_FEATURE_UNWIND_COMPACT 0
+#    endif
+#  endif
+#endif
+#ifndef PLCRASH_FEATURE_MACH_EXCEPTIONS
+#    define PLCRASH_FEATURE_MACH_EXCEPTIONS 1
+#endif
+#ifndef PLCRASH_FEATURE_UNWIND_DWARF
+#    define PLCRASH_FEATURE_UNWIND_DWARF 1
+#endif
+#ifndef PLCRASH_FEATURE_UNWIND_COMPACT
+#    define PLCRASH_FEATURE_UNWIND_COMPACT 1
+#endif
+#endif 

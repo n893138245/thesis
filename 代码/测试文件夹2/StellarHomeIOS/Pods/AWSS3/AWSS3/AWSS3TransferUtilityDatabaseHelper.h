@@ -1,0 +1,2 @@
+@interface AWSS3TransferUtilityDatabaseHelper:NSObject
+@end

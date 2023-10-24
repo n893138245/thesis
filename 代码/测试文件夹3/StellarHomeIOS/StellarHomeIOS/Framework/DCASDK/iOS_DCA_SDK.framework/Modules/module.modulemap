@@ -1,0 +1,11 @@
+framework module iOS_DCA_SDK {
+  umbrella header "iOS_DCA_SDK.h"
+
+  export *
+  module * { export * }
+}
+
+module iOS_DCA_SDK.Swift {
+    header "iOS_DCA_SDK-Swift.h"
+    requires objc
+}

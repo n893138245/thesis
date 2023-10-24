@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xJh-EC-Wq5" customClass="HintTextView" customModule="StellarHomeIOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ew-7w-TnD">
+                    <rect key="frame" x="20" y="0.0" width="374" height="85"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYg-b5-sDH">
+                            <rect key="frame" x="60" y="12" width="254" height="61"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="eYg-b5-sDH" secondAttribute="trailing" constant="60" id="7td-Oh-0f8"/>
+                        <constraint firstAttribute="bottom" secondItem="eYg-b5-sDH" secondAttribute="bottom" constant="12" id="9wt-AV-gcH"/>
+                        <constraint firstItem="eYg-b5-sDH" firstAttribute="top" secondItem="7ew-7w-TnD" secondAttribute="top" constant="12" id="HcW-PV-rt0"/>
+                        <constraint firstItem="eYg-b5-sDH" firstAttribute="leading" secondItem="7ew-7w-TnD" secondAttribute="leading" constant="60" id="OTp-6J-uIv"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="7ew-7w-TnD" secondAttribute="trailing" constant="20" id="23b-v2-qkQ"/>
+                <constraint firstItem="7ew-7w-TnD" firstAttribute="top" secondItem="xJh-EC-Wq5" secondAttribute="top" id="7ow-ce-WBm"/>
+                <constraint firstItem="7ew-7w-TnD" firstAttribute="leading" secondItem="xJh-EC-Wq5" secondAttribute="leading" constant="20" id="bax-HV-rqW"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <connections>
+                <outlet property="contentView" destination="7ew-7w-TnD" id="TyK-up-Ded"/>
+                <outlet property="textLabel" destination="eYg-b5-sDH" id="c4o-mE-tpc"/>
+                <outlet property="textLabelViewTopConstraint" destination="7ow-ce-WBm" id="eKB-rk-3bd"/>
+            </connections>
+            <point key="canvasLocation" x="136.23188405797103" y="137.94642857142856"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SelectBgImageCell" customModule="StellarHomeIOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="206" height="97"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="206" height="97"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scence_1" translatesAutoresizingMaskIntoConstraints="NO" id="ls5-a2-UF6">
+                        <rect key="frame" x="0.0" y="0.0" width="206" height="97"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOe-Pw-KOg">
+                        <rect key="frame" x="181" y="68" width="18" height="22"/>
+                        <state key="normal" image="radio_select"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ls5-a2-UF6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7iI-c5-bA0"/>
+                <constraint firstAttribute="trailing" secondItem="eOe-Pw-KOg" secondAttribute="trailing" constant="7" id="DEr-Uy-Jmi"/>
+                <constraint firstItem="ls5-a2-UF6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Dy5-C6-FXP"/>
+                <constraint firstAttribute="trailing" secondItem="ls5-a2-UF6" secondAttribute="trailing" id="Vtf-ZF-gIb"/>
+                <constraint firstAttribute="bottom" secondItem="eOe-Pw-KOg" secondAttribute="bottom" constant="7" id="cMD-GV-eZQ"/>
+                <constraint firstAttribute="bottom" secondItem="ls5-a2-UF6" secondAttribute="bottom" id="qmO-hg-vo9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="206" height="97"/>
+            <connections>
+                <outlet property="bgImage" destination="ls5-a2-UF6" id="4q4-pp-qbD"/>
+                <outlet property="selectBtn" destination="eOe-Pw-KOg" id="Ocq-mH-lne"/>
+            </connections>
+            <point key="canvasLocation" x="105.79710144927537" y="98.772321428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="radio_select" width="18" height="18"/>
+        <image name="scence_1" width="750" height="326"/>
+    </resources>
+</document>

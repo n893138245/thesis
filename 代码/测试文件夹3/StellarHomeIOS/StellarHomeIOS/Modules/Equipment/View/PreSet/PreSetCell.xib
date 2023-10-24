@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PreSetCell" customModule="Stellar_Home_Beta" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="129" height="115"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="129" height="115"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAC-kJ-Bme">
+                        <rect key="frame" x="0.0" y="0.0" width="129" height="115"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_temperature_4_n" translatesAutoresizingMaskIntoConstraints="NO" id="cwp-q7-ajX">
+                        <rect key="frame" x="52.5" y="27.5" width="24" height="24"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="看书" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuA-FJ-3Uk">
+                        <rect key="frame" x="50" y="63.5" width="29" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cAC-kJ-Bme" secondAttribute="trailing" id="2NJ-8u-fHn"/>
+                <constraint firstItem="cAC-kJ-Bme" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DkH-Ln-rqL"/>
+                <constraint firstAttribute="bottom" secondItem="cAC-kJ-Bme" secondAttribute="bottom" id="FLQ-Hg-KQQ"/>
+                <constraint firstItem="zuA-FJ-3Uk" firstAttribute="top" secondItem="cwp-q7-ajX" secondAttribute="bottom" constant="12" id="O19-3z-dtu"/>
+                <constraint firstItem="cAC-kJ-Bme" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UY7-p1-kDA"/>
+                <constraint firstItem="zuA-FJ-3Uk" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="gbO-5G-zMB"/>
+                <constraint firstItem="cwp-q7-ajX" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-6" id="unD-S3-H1g"/>
+                <constraint firstItem="cwp-q7-ajX" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="yIj-9n-3FC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="129" height="115"/>
+            <connections>
+                <outlet property="animateView" destination="cAC-kJ-Bme" id="wre-eb-iJp"/>
+                <outlet property="mImage" destination="cwp-q7-ajX" id="Bgp-7b-as6"/>
+                <outlet property="mTitleLabel" destination="zuA-FJ-3Uk" id="Cgk-n1-UXR"/>
+            </connections>
+            <point key="canvasLocation" x="84.782608695652186" y="44.53125"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon_temperature_4_n" width="24" height="24"/>
+    </resources>
+</document>

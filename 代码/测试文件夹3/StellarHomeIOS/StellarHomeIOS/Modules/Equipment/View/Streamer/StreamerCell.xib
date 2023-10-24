@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="StreamerCell" customModule="StellarHomeIOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="190"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="333" height="190"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QUz-Xi-FeW">
+                        <rect key="frame" x="0.0" y="0.0" width="333" height="190"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sansi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t48-RN-4LB">
+                        <rect key="frame" x="17" y="158.5" width="38.5" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                        <color key="textColor" red="0.94330204920000005" green="0.94330204920000005" blue="0.94330204920000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMg-1u-hPA">
+                        <rect key="frame" x="295" y="8" width="28" height="28"/>
+                        <state key="normal" image="icon_streamer_more28"/>
+                        <connections>
+                            <action selector="clickMore:" destination="gTV-IL-0wX" eventType="touchUpInside" id="2Jn-bA-4me"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkk-KW-3rA">
+                        <rect key="frame" x="301" y="8" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="1oq-vx-HsQ"/>
+                            <constraint firstAttribute="height" constant="24" id="cbJ-2C-tZX"/>
+                        </constraints>
+                        <state key="normal" image="icon_streamer_white28"/>
+                        <connections>
+                            <action selector="clickSelect:" destination="gTV-IL-0wX" eventType="touchUpInside" id="3cc-fB-EYF"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="QUz-Xi-FeW" secondAttribute="bottom" id="1vm-fv-uZc"/>
+                <constraint firstItem="LMg-1u-hPA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="FDj-uq-DIA"/>
+                <constraint firstItem="hkk-KW-3rA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="KVF-S0-o7P"/>
+                <constraint firstItem="QUz-Xi-FeW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Nnr-Ag-E3e"/>
+                <constraint firstItem="t48-RN-4LB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="17" id="RS4-uT-943"/>
+                <constraint firstAttribute="trailing" secondItem="hkk-KW-3rA" secondAttribute="trailing" constant="8" id="Txo-G3-Kjg"/>
+                <constraint firstAttribute="bottom" secondItem="t48-RN-4LB" secondAttribute="bottom" constant="12" id="fFt-4x-6Fi"/>
+                <constraint firstAttribute="trailing" secondItem="QUz-Xi-FeW" secondAttribute="trailing" id="obf-gP-Ife"/>
+                <constraint firstItem="QUz-Xi-FeW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rA0-0n-NMV"/>
+                <constraint firstAttribute="trailing" secondItem="LMg-1u-hPA" secondAttribute="trailing" constant="10" id="wqb-vc-6nM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="333" height="190"/>
+            <connections>
+                <outlet property="bgImage" destination="QUz-Xi-FeW" id="WBF-9A-7xC"/>
+                <outlet property="nameLabel" destination="t48-RN-4LB" id="yYV-0s-lFf"/>
+                <outlet property="playButton" destination="LMg-1u-hPA" id="1N6-Nx-qCB"/>
+                <outlet property="selectedButton" destination="hkk-KW-3rA" id="1VQ-oc-q4r"/>
+            </connections>
+            <point key="canvasLocation" x="331" y="267"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon_streamer_more28" width="28" height="28"/>
+        <image name="icon_streamer_white28" width="28" height="28"/>
+    </resources>
+</document>

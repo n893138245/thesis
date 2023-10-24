@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="140" id="KGk-i7-Jjw" customClass="GetwayVoiceCommandsCell" customModule="StellarHomeIOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDY-z8-gBI">
+                        <rect key="frame" x="9" y="0.0" width="302" height="124"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_gray_right_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="0mZ-63-9J2">
+                                <rect key="frame" x="265" y="52" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="GTQ-QZ-28e"/>
+                                    <constraint firstAttribute="height" constant="20" id="LIg-gn-cna"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xkf-Jo-fej">
+                                <rect key="frame" x="24" y="35" width="54" height="54"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lamp_icon" translatesAutoresizingMaskIntoConstraints="NO" id="xU3-TZ-Bxi">
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="xU3-TZ-Bxi" firstAttribute="leading" secondItem="Xkf-Jo-fej" secondAttribute="leading" id="5Jq-sT-EFM"/>
+                                    <constraint firstAttribute="bottom" secondItem="xU3-TZ-Bxi" secondAttribute="bottom" id="JH1-9z-uEn"/>
+                                    <constraint firstItem="xU3-TZ-Bxi" firstAttribute="top" secondItem="Xkf-Jo-fej" secondAttribute="top" id="Rql-Lo-jNk"/>
+                                    <constraint firstAttribute="width" constant="54" id="YTA-kN-nav"/>
+                                    <constraint firstAttribute="height" constant="54" id="kIC-H6-sGy"/>
+                                    <constraint firstAttribute="trailing" secondItem="xU3-TZ-Bxi" secondAttribute="trailing" id="lzq-ig-3FB"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客厅灯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voF-fz-bnU">
+                                <rect key="frame" x="103" y="27.5" width="147" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="slF-oR-bT4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" red="0.15326043963432312" green="0.16285607218742371" blue="0.20991593599319458" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“打开客厅灯”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXd-N8-c3K">
+                                <rect key="frame" x="102" y="53.5" width="148" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="AhO-Cs-5aE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.37494188547134399" green="0.39137360453605652" blue="0.46383577585220337" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“关闭客厅灯”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6T-U1-jPm">
+                                <rect key="frame" x="103" y="76.5" width="147" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="NHL-qP-BCE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.37494188547134399" green="0.39137360453605652" blue="0.46383577585220337" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95212250947952271" green="0.95617443323135376" blue="0.976054847240448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0mZ-63-9J2" firstAttribute="leading" secondItem="o6T-U1-jPm" secondAttribute="trailing" constant="15" id="0HZ-ER-p0X"/>
+                            <constraint firstItem="voF-fz-bnU" firstAttribute="leading" secondItem="Xkf-Jo-fej" secondAttribute="trailing" constant="25" id="2nz-8X-NH0"/>
+                            <constraint firstItem="WXd-N8-c3K" firstAttribute="top" secondItem="voF-fz-bnU" secondAttribute="bottom" constant="6" id="5Ya-eU-WqF"/>
+                            <constraint firstItem="Xkf-Jo-fej" firstAttribute="leading" secondItem="KDY-z8-gBI" secondAttribute="leading" constant="24" id="8iL-9R-pSZ"/>
+                            <constraint firstItem="0mZ-63-9J2" firstAttribute="leading" secondItem="WXd-N8-c3K" secondAttribute="trailing" constant="15" id="HNo-aP-Ord"/>
+                            <constraint firstItem="o6T-U1-jPm" firstAttribute="leading" secondItem="Xkf-Jo-fej" secondAttribute="trailing" constant="25" id="IMA-E4-eC5"/>
+                            <constraint firstItem="o6T-U1-jPm" firstAttribute="top" secondItem="WXd-N8-c3K" secondAttribute="bottom" constant="6" id="Nrd-9a-rTC"/>
+                            <constraint firstItem="0mZ-63-9J2" firstAttribute="centerY" secondItem="KDY-z8-gBI" secondAttribute="centerY" id="Ris-2a-zPz"/>
+                            <constraint firstItem="WXd-N8-c3K" firstAttribute="leading" secondItem="Xkf-Jo-fej" secondAttribute="trailing" constant="24" id="Rvt-dr-0wX"/>
+                            <constraint firstItem="Xkf-Jo-fej" firstAttribute="centerY" secondItem="KDY-z8-gBI" secondAttribute="centerY" id="hHo-EJ-DSA"/>
+                            <constraint firstItem="WXd-N8-c3K" firstAttribute="centerY" secondItem="KDY-z8-gBI" secondAttribute="centerY" id="me1-HP-jM6"/>
+                            <constraint firstAttribute="trailing" secondItem="0mZ-63-9J2" secondAttribute="trailing" constant="17" id="s7r-oP-PdO"/>
+                            <constraint firstItem="0mZ-63-9J2" firstAttribute="leading" secondItem="voF-fz-bnU" secondAttribute="trailing" constant="15" id="zbS-kW-hHH"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="KDY-z8-gBI" secondAttribute="trailing" constant="9" id="Ovf-Eb-MY7"/>
+                    <constraint firstItem="KDY-z8-gBI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="QZG-Jk-r9k"/>
+                    <constraint firstAttribute="bottom" secondItem="KDY-z8-gBI" secondAttribute="bottom" constant="16" id="a01-t2-ynS"/>
+                    <constraint firstItem="KDY-z8-gBI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dBt-WU-ob8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bgView" destination="KDY-z8-gBI" id="74d-vG-8an"/>
+                <outlet property="bottomCommandLabel" destination="o6T-U1-jPm" id="6xN-Sy-2oa"/>
+                <outlet property="deviceBgView" destination="Xkf-Jo-fej" id="R2k-L5-ooV"/>
+                <outlet property="deviceImage" destination="xU3-TZ-Bxi" id="nCW-Sl-o70"/>
+                <outlet property="deviceNameLabel" destination="voF-fz-bnU" id="8pe-fo-EaR"/>
+                <outlet property="topCommandLabel" destination="WXd-N8-c3K" id="7oX-Sq-Q08"/>
+            </connections>
+            <point key="canvasLocation" x="57.971014492753625" y="100.44642857142857"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_gray_right_arrow" width="20" height="20"/>
+        <image name="lamp_icon" width="16" height="16"/>
+    </resources>
+</document>

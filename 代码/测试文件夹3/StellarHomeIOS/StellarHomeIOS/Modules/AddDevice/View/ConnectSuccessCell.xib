@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="79" id="KGk-i7-Jjw" customClass="ConnectSuccessCell" customModule="Stellar_Home_Beta" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_normal" translatesAutoresizingMaskIntoConstraints="NO" id="ZJz-nZ-hsK">
+                        <rect key="frame" x="281" y="30.5" width="18" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="18" id="0Zm-Yy-Tk8"/>
+                            <constraint firstAttribute="height" constant="18" id="5Nr-cv-d0g"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sV2-cS-aIA">
+                        <rect key="frame" x="11" y="78" width="298" height="1"/>
+                        <color key="backgroundColor" red="0.94185692071914673" green="0.94935065507888794" blue="0.96244245767593384" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="yZ9-5Q-UgX"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="room_none" translatesAutoresizingMaskIntoConstraints="NO" id="9qc-z3-SSg">
+                        <rect key="frame" x="26" y="27.5" width="21.5" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="eXg-HG-EcE"/>
+                            <constraint firstAttribute="width" constant="21.399999999999999" id="zkr-0J-fHf"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客厅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzn-Em-T87">
+                        <rect key="frame" x="68" y="29" width="35" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9qc-z3-SSg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="9ai-hJ-77e"/>
+                    <constraint firstAttribute="bottom" secondItem="sV2-cS-aIA" secondAttribute="bottom" id="9ih-Je-ZlD"/>
+                    <constraint firstAttribute="trailing" secondItem="sV2-cS-aIA" secondAttribute="trailing" constant="11" id="KFV-dc-err"/>
+                    <constraint firstItem="qzn-Em-T87" firstAttribute="leading" secondItem="9qc-z3-SSg" secondAttribute="trailing" constant="20.5" id="NRK-iA-AWr"/>
+                    <constraint firstItem="9qc-z3-SSg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Yq3-8X-Qxv"/>
+                    <constraint firstItem="sV2-cS-aIA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="djq-zj-rkZ"/>
+                    <constraint firstItem="ZJz-nZ-hsK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gtH-i2-XIe"/>
+                    <constraint firstItem="qzn-Em-T87" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hn7-S3-IcF"/>
+                    <constraint firstAttribute="trailing" secondItem="ZJz-nZ-hsK" secondAttribute="trailing" constant="21" id="szG-Td-D7M"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="mCheckIcon" destination="ZJz-nZ-hsK" id="5Cv-hc-8VF"/>
+                <outlet property="mTitleLabel" destination="qzn-Em-T87" id="Rfq-go-JYB"/>
+                <outlet property="roomIcon" destination="9qc-z3-SSg" id="aiM-Qu-amV"/>
+            </connections>
+            <point key="canvasLocation" x="269.56521739130437" y="37.165178571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="radio_normal" width="18" height="18"/>
+        <image name="room_none" width="48" height="48"/>
+    </resources>
+</document>

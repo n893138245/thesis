@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="140" id="KGk-i7-Jjw" customClass="ThridPartCell" customModule="StellarHomeIOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiU-gT-EiE">
+                        <rect key="frame" x="20" y="0.0" width="335" height="124"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AmazonAlexa" translatesAutoresizingMaskIntoConstraints="NO" id="M0U-Lr-QK7">
+                                <rect key="frame" x="17" y="37" width="50" height="50"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amazon Alexa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCT-iu-nap">
+                                <rect key="frame" x="83" y="35" width="115" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect your SANSI device to Alexa for handsfree control" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMp-KR-GDT">
+                                <rect key="frame" x="83" y="65" width="186" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.58448034520000003" green="0.579898417" blue="0.60784757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_gray_right_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ulP-6H-tcd">
+                                <rect key="frame" x="291" y="52" width="20" height="20"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95311146970000005" green="0.9564996362" blue="0.97647458310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="sMp-KR-GDT" firstAttribute="leading" secondItem="M0U-Lr-QK7" secondAttribute="trailing" constant="16" id="4Jl-U5-jF3"/>
+                            <constraint firstItem="M0U-Lr-QK7" firstAttribute="leading" secondItem="uiU-gT-EiE" secondAttribute="leading" constant="17" id="FLb-9I-uX8"/>
+                            <constraint firstItem="sMp-KR-GDT" firstAttribute="top" secondItem="fCT-iu-nap" secondAttribute="bottom" constant="8" id="GEe-PE-OYA"/>
+                            <constraint firstAttribute="trailing" secondItem="ulP-6H-tcd" secondAttribute="trailing" constant="24" id="Sdf-jk-XeH"/>
+                            <constraint firstItem="ulP-6H-tcd" firstAttribute="centerY" secondItem="uiU-gT-EiE" secondAttribute="centerY" id="SzU-bh-fHv"/>
+                            <constraint firstItem="fCT-iu-nap" firstAttribute="leading" secondItem="M0U-Lr-QK7" secondAttribute="trailing" constant="16" id="jR7-0a-ZIJ"/>
+                            <constraint firstItem="M0U-Lr-QK7" firstAttribute="centerY" secondItem="uiU-gT-EiE" secondAttribute="centerY" id="k7w-PX-ee2"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sMp-KR-GDT" secondAttribute="trailing" constant="52" id="rFe-F0-9yz"/>
+                            <constraint firstItem="fCT-iu-nap" firstAttribute="top" secondItem="uiU-gT-EiE" secondAttribute="top" constant="35" id="xVd-wC-fpv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="uiU-gT-EiE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="HMv-ev-7Xp"/>
+                    <constraint firstItem="uiU-gT-EiE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="KOM-gf-ifr"/>
+                    <constraint firstAttribute="bottom" secondItem="uiU-gT-EiE" secondAttribute="bottom" constant="16" id="Q3w-1e-hmr"/>
+                    <constraint firstAttribute="trailing" secondItem="uiU-gT-EiE" secondAttribute="trailing" constant="20" id="fT1-6E-NH9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bgView" destination="uiU-gT-EiE" id="b0m-zP-djQ"/>
+                <outlet property="iconImage" destination="M0U-Lr-QK7" id="OQ6-AO-Kh0"/>
+                <outlet property="mContentLabel" destination="sMp-KR-GDT" id="2sg-5s-Lmg"/>
+                <outlet property="mTitleLabel" destination="fCT-iu-nap" id="kEs-84-xnC"/>
+            </connections>
+            <point key="canvasLocation" x="-251" y="57"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="AmazonAlexa" width="50" height="50"/>
+        <image name="icon_gray_right_arrow" width="20" height="20"/>
+    </resources>
+</document>

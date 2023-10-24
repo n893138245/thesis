@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="StellarDatePickerView" customModule="StellarHomeIOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQu-zG-7Fr">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7y-DX-zRS">
+                    <rect key="frame" x="0.0" y="602" width="414" height="260"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2p1-uL-g8I">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUF-Qe-Rqy">
+                                    <rect key="frame" x="357" y="5.5" width="35" height="33"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <state key="normal" title="确定"/>
+                                    <connections>
+                                        <action selector="rightBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="GCY-0o-Cqe"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgo-VS-eIu">
+                                    <rect key="frame" x="22" y="11.5" width="42" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.97648364305496216" green="0.97644716501235962" blue="0.97647196054458618" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstItem="Vgo-VS-eIu" firstAttribute="centerY" secondItem="2p1-uL-g8I" secondAttribute="centerY" id="AbB-kB-o1V"/>
+                                <constraint firstItem="nUF-Qe-Rqy" firstAttribute="centerY" secondItem="2p1-uL-g8I" secondAttribute="centerY" id="Ihb-sG-fSp"/>
+                                <constraint firstAttribute="trailing" secondItem="nUF-Qe-Rqy" secondAttribute="trailing" constant="22" id="XS6-62-AIo"/>
+                                <constraint firstAttribute="height" constant="44" id="jpw-dJ-Q4r"/>
+                                <constraint firstItem="Vgo-VS-eIu" firstAttribute="leading" secondItem="2p1-uL-g8I" secondAttribute="leading" constant="22" id="xix-cW-ayq"/>
+                            </constraints>
+                        </view>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Oxs-w5-hb5">
+                            <rect key="frame" x="0.0" y="44" width="414" height="216"/>
+                            <date key="date" timeIntervalSinceReferenceDate="589277335.77931404">
+                                <!--2019-09-04 08:08:55 +0000-->
+                            </date>
+                        </datePicker>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Oxs-w5-hb5" secondAttribute="trailing" id="0fv-Ho-NoZ"/>
+                        <constraint firstItem="Oxs-w5-hb5" firstAttribute="top" secondItem="2p1-uL-g8I" secondAttribute="bottom" id="3Pt-RU-HVp"/>
+                        <constraint firstItem="Oxs-w5-hb5" firstAttribute="leading" secondItem="d7y-DX-zRS" secondAttribute="leading" id="3RW-7e-xGF"/>
+                        <constraint firstItem="2p1-uL-g8I" firstAttribute="top" secondItem="d7y-DX-zRS" secondAttribute="top" id="80G-pB-BdB"/>
+                        <constraint firstAttribute="trailing" secondItem="2p1-uL-g8I" secondAttribute="trailing" id="LMz-yk-CrF"/>
+                        <constraint firstAttribute="bottom" secondItem="Oxs-w5-hb5" secondAttribute="bottom" id="Nej-rX-wPn"/>
+                        <constraint firstItem="2p1-uL-g8I" firstAttribute="leading" secondItem="d7y-DX-zRS" secondAttribute="leading" id="Q54-Wc-Zpe"/>
+                        <constraint firstAttribute="height" constant="260" id="fnq-mO-KHr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="d7y-DX-zRS" secondAttribute="bottom" id="9mn-FC-BUN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nQu-zG-7Fr" secondAttribute="trailing" id="B3n-0g-KmC"/>
+                <constraint firstItem="d7y-DX-zRS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Gyn-Nx-ida"/>
+                <constraint firstItem="nQu-zG-7Fr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="PwG-eg-kxD"/>
+                <constraint firstItem="nQu-zG-7Fr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VjG-ET-ZeM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="d7y-DX-zRS" secondAttribute="trailing" id="fjG-Zs-fPb"/>
+                <constraint firstAttribute="bottom" secondItem="nQu-zG-7Fr" secondAttribute="bottom" id="xb1-6U-NPp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="datePick" destination="Oxs-w5-hb5" id="Vgp-RL-z7N"/>
+                <outlet property="leftLabel" destination="Vgo-VS-eIu" id="Ge7-tb-2pI"/>
+                <outlet property="rightBtn" destination="nUF-Qe-Rqy" id="ogK-OT-3fn"/>
+            </connections>
+        </view>
+    </objects>
+</document>

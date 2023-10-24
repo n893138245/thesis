@@ -1,0 +1,13 @@
+/* 
+  InfoPlist.strings
+  StellarHomeIOS
+
+  Created by Sansi Mac on 2020/1/10.
+  Copyright © 2020 don. All rights reserved.
+*/
+{
+    "NSCameraUsageDescription" = "用户可以拍摄照片来修改头像";
+    "NSPhotoLibraryUsageDescription" = "用户可以访问您的相册选择照片来修改头像";
+    "NSLocationWhenInUseUsageDescription" = "用于iOS 13或更高版本检测Wi-Fi，以添加设备";
+//    "NSLocationUsageDescription" = "用于检测iOS 13或更高版本的Wi-Fi名称";
+}

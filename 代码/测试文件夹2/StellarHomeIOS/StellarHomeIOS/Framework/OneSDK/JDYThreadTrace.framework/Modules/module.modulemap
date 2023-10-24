@@ -1,0 +1,6 @@
+framework module JDYThreadTrace {
+  umbrella header "JDYThreadTrace.h"
+
+  export *
+  module * { export * }
+}

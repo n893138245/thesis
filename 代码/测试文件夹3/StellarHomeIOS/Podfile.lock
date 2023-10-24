@@ -1,0 +1,210 @@
+PODS:
+  - Alamofire (4.9.1)
+  - AWSAuthCore (2.19.1):
+    - AWSCore (= 2.19.1)
+  - AWSCognito (2.19.1):
+    - AWSCore (= 2.19.1)
+  - AWSCognitoIdentityProvider (2.19.1):
+    - AWSCognitoIdentityProviderASF (= 2.19.1)
+    - AWSCore (= 2.19.1)
+  - AWSCognitoIdentityProviderASF (2.19.1)
+  - AWSCore (2.19.1)
+  - AWSMobileClient (2.19.1):
+    - AWSAuthCore (= 2.19.1)
+    - AWSCognitoIdentityProvider (= 2.19.1)
+    - AWSCognitoIdentityProviderASF (= 2.19.1)
+    - AWSCore (= 2.19.1)
+  - AWSS3 (2.19.1):
+    - AWSCore (= 2.19.1)
+  - CocoaAsyncSocket (7.6.5)
+  - CocoaLumberjack (3.7.2):
+    - CocoaLumberjack/Core (= 3.7.2)
+  - CocoaLumberjack/Core (3.7.2)
+  - CocoaMQTT (1.2.5):
+    - CocoaAsyncSocket (~> 7.6.3)
+  - CountryPickerView (3.2.0)
+  - CryptoSwift (1.4.0)
+  - Differentiator (4.0.1)
+  - FBAllocationTracker (0.1.5)
+  - FBRetainCycleDetector (0.1.4)
+  - FDFullscreenPopGesture (1.1)
+  - FSCalendar (2.8.2)
+  - IQKeyboardManagerSwift (6.5.6)
+  - KakaJSON (1.1.2)
+  - Kingfisher (5.14.1):
+    - Kingfisher/Core (= 5.14.1)
+  - Kingfisher/Core (5.14.1)
+  - libPhoneNumber-iOS (0.9.15)
+  - LTMorphingLabel (0.8.1)
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.2.3)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - NSHash (1.2.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
+  - pop (1.0.12)
+  - ReactiveCocoa (11.2.1):
+    - ReactiveSwift (~> 6.6)
+  - ReactiveSwift (6.6.0)
+  - Result (4.1.0)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.2)
+  - SnapKit (5.0.1)
+  - SwiftRichString (3.5.1)
+  - SwiftyJSON (4.3.0)
+  - SwipeCellKit (2.7.1)
+  - TZImagePickerController (3.6.0)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8)
+  - AWSCognito
+  - AWSMobileClient
+  - AWSS3
+  - CocoaAsyncSocket
+  - CocoaLumberjack
+  - CocoaMQTT
+  - CountryPickerView
+  - CryptoSwift (~> 1.0)
+  - FBAllocationTracker
+  - FBRetainCycleDetector (from `https://github.com/facebook/FBRetainCycleDetector.git`, commit `32c4afc1`)
+  - FDFullscreenPopGesture (= 1.1)
+  - FSCalendar
+  - IQKeyboardManagerSwift
+  - KakaJSON (~> 1.1.2)
+  - Kingfisher (~> 5.14.0)
+  - libPhoneNumber-iOS
+  - LTMorphingLabel (~> 0.8.1)
+  - MBProgressHUD
+  - MJRefresh (~> 3.2.3)
+  - Moya
+  - NSHash
+  - NVActivityIndicatorView
+  - pop
+  - ReactiveCocoa
+  - RxCocoa
+  - RxDataSources (~> 4.0)
+  - RxSwift
+  - SnapKit
+  - SwiftRichString (~> 3.5.1)
+  - SwiftyJSON (~> 4.0)
+  - SwipeCellKit
+  - TZImagePickerController
+  - YYKit (~> 1.0.9)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AWSAuthCore
+    - AWSCognito
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSMobileClient
+    - AWSS3
+    - CocoaAsyncSocket
+    - CocoaLumberjack
+    - CocoaMQTT
+    - CountryPickerView
+    - CryptoSwift
+    - Differentiator
+    - FBAllocationTracker
+    - FDFullscreenPopGesture
+    - FSCalendar
+    - IQKeyboardManagerSwift
+    - KakaJSON
+    - Kingfisher
+    - libPhoneNumber-iOS
+    - LTMorphingLabel
+    - MBProgressHUD
+    - MJRefresh
+    - Moya
+    - NSHash
+    - NVActivityIndicatorView
+    - pop
+    - ReactiveCocoa
+    - ReactiveSwift
+    - Result
+    - RxCocoa
+    - RxDataSources
+    - RxRelay
+    - RxSwift
+    - SnapKit
+    - SwiftRichString
+    - SwiftyJSON
+    - SwipeCellKit
+    - TZImagePickerController
+    - YYKit
+
+EXTERNAL SOURCES:
+  FBRetainCycleDetector:
+    :commit: 32c4afc1
+    :git: https://github.com/facebook/FBRetainCycleDetector.git
+
+CHECKOUT OPTIONS:
+  FBRetainCycleDetector:
+    :commit: 32c4afc1
+    :git: https://github.com/facebook/FBRetainCycleDetector.git
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AWSAuthCore: 387c5e3482edbbb0fe754fa110a2a0203c783432
+  AWSCognito: f50de600804941d083af37a7568905f31a774727
+  AWSCognitoIdentityProvider: e6932c709d3e0b234128aeb5f2052c9bf1032d8d
+  AWSCognitoIdentityProviderASF: 749f58b75e69f7f0144b9d38539525562b843d34
+  AWSCore: 55c154ae27efc5c98bdc30a0eeea5a35d10a2ab5
+  AWSMobileClient: b908cada3c35da9cfe5b4ff9947fcf70142495e7
+  AWSS3: 2272253b098d07803af8dd20ce6ce7302bcffb47
+  CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
+  CocoaLumberjack: b7e05132ff94f6ae4dfa9d5bce9141893a21d9da
+  CocoaMQTT: a61490ed3b328011c5d75169a77781983e2bb221
+  CountryPickerView: 9b093bfffb4b06a69ba6185a798cadbf863720e7
+  CryptoSwift: 7cc902df1784de3b389a387756c7d710f197730c
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  FBAllocationTracker: dfdca3f71aceca6a85e95e3c6ec76a9785eba0f1
+  FBRetainCycleDetector: 46daef95c2dfa9be34b53087edf6a8f34e4c749c
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  KakaJSON: cc5ff50a8c1cfbb09413db8496cb709a209e6137
+  Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
+  libPhoneNumber-iOS: 0a32a9525cf8744fe02c5206eb30d571e38f7d75
+  LTMorphingLabel: c160673ab7220f4bcf6105308ad902fed8ffd3d0
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: 2b1214a2dc8f4df4c5dcb028ea2ad4e245425fb7
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  NSHash: 036c03781d372c288d332b512b203e7bb832e46e
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  ReactiveCocoa: 194289e7069037d40c59cb4ae9230f4b1ec05fa8
+  ReactiveSwift: be9407e2aaf8a11e53a5229255693cffd9a63ccf
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftRichString: e7da1b0b1d931d7e1cee5f217972309c36867e03
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
+  TZImagePickerController: a37d7eec87c54436e896a67947033ad2178d498b
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: b6e5fd84ab3890016e38808076fa81995db08587
+
+COCOAPODS: 1.11.3

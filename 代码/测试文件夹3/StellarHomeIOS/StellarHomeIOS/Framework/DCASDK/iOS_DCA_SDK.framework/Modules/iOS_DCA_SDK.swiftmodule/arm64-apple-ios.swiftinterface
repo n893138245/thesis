@@ -1,0 +1,2111 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.1 effective-4.2 (swiftlang-1200.0.41 clang-1200.0.32.8)
+// swift-module-flags: -target arm64-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name iOS_DCA_SDK
+import AVKit
+import Alamofire
+import AssetsLibrary
+import CocoaMQTT
+import CoreBluetooth
+import DCAToolsSDK
+import Foundation
+import Swift
+import UIKit
+import WebKit
+import YYKit
+@_exported import iOS_DCA_SDK
+@objc @_inheritsConvenienceInitializers public class AboutUsH5UrlModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var adCooperation: Swift.String?
+  @objc public var commonProblem: Swift.String?
+  @objc public var companyProcurement: Swift.String?
+  @objc public var contactUs: Swift.String?
+  @objc public var hardwareInformation: Swift.String?
+  @objc public var secrecyProtocol: Swift.String?
+  @objc public var serviceProtocol: Swift.String?
+  @objc public var shopLink: Swift.String?
+  @objc public var useGuide: Swift.String?
+  @objc public var userProtocol: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class BabyDataModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var born: Swift.Int
+  @objc public var relation: Swift.String?
+  @objc public var sex: Swift.Int
+  @objc public var babyInfoId: Swift.Int
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class PBRecommendTypeModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var recommendId: Swift.String?
+  @objc public var imageUrl: Swift.String?
+  @objc public var type: Swift.Int
+  @objc public var viewType: Swift.Int
+  @objc public var themeValue: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class PBRecommendListModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var discountPrice: Swift.Float
+  @objc public var imageUrl: Swift.String?
+  @objc public var recommendId: Swift.String?
+  @objc public var picBookName: Swift.String?
+  @objc public var originalPrice: Swift.Float
+  @objc public var recommendReason: Swift.String?
+  @objc public var picBookId: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class PBListModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var imageUrl: Swift.String?
+  @objc public var audioUrl: Swift.String?
+  @objc public var pageNum: Swift.Int
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class PBRecommendDetailModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var author: Swift.String?
+  @objc public var imageUrl: Swift.String?
+  @objc public var recommendReason: Swift.String?
+  @objc public var desc: Swift.String?
+  @objc public var typeName: Swift.String?
+  @objc public var readFrequency: Swift.Int
+  @objc public var languageType: Swift.Int
+  @objc public var picBookName: Swift.String?
+  @objc public var picBookList: [iOS_DCA_SDK.PBListModel]?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class PBReadRecordModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var readBookCount: Swift.Int
+  @objc public var readFrequency: Swift.Int
+  @objc public var readDuration: Swift.Int
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class PBRecordListModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var correctQaCount: Swift.Int
+  @objc public var qaCount: Swift.Int
+  @objc public var imageUrl: Swift.String?
+  @objc public var picBookName: Swift.String?
+  @objc public var picBookId: Swift.String?
+  @objc public var readFrequency: Swift.Int
+  @objc public var readDuration: Swift.Int
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class BookTypeReadStatsModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var ratio: Swift.Double
+  @objc public var bookTypeName: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class PBDetailedListModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var dataStr: Swift.String?
+  @objc public var readBookCount: Swift.Int
+  @objc public var bookCountList: [iOS_DCA_SDK.PBRecordListModel]?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ReadTrendModel : ObjectiveC.NSObject {
+  @objc public var Monday: Swift.Int
+  @objc public var Tuesday: Swift.Int
+  @objc public var Wednesday: Swift.Int
+  @objc public var Thursday: Swift.Int
+  @objc public var Friday: Swift.Int
+  @objc public var Saturday: Swift.Int
+  @objc public var Sunday: Swift.Int
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class PBReadRecordDetailModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var days: Swift.Int
+  @objc public var exceedRatio: Swift.Int
+  @objc public var poster: Swift.String?
+  @objc public var qrCode: Swift.String?
+  @objc public var readTrend: iOS_DCA_SDK.ReadTrendModel?
+  @objc public var bookTypeReadStats: [iOS_DCA_SDK.BookTypeReadStatsModel]?
+  @objc public var readBookCount: Swift.Int
+  @objc public var readDuration: Swift.Int
+  @objc public var detailedList: [iOS_DCA_SDK.PBDetailedListModel]?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class DCAAppManager : ObjectiveC.NSObject {
+  @objc public func getAdvertisementListData(callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.AdvertisementModel?) -> ()))
+  @objc public func getCarouselData(callBack: @escaping ((Swift.String, Swift.String, [iOS_DCA_SDK.ChildCarouselModel]?) -> ()))
+  @objc public func feedBack(type: Swift.String, userPhone: Swift.String, content: Swift.String, imageUrl: Swift.String, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func loadAboutUsMsgData(callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.AboutUsH5UrlModel?) -> ()))
+  @objc public func checkAppVersion(version: Swift.String, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public enum DCASDKEBTYPE : Swift.Int {
+  case SMARTHOME = 0
+  case SMARTHOME_DEVICE_LIST = 1
+  case DIALOG_MESSGAE = 2
+  case SKILL_CENTER = 3
+  case PRODUCT_SKILL = 4
+  case SEARCH_SKILL = 5
+  case COMMON_PAGE = 6
+  case SKILL_INSTALL = 7
+  case CUSTOME_DIALOG = 8
+  case CUSTOME_DIALOGCREATE = 9
+  case SKILL_STORE = 10
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class DCAWebViewInfo : ObjectiveC.NSObject {
+  @objc public var productId: Swift.String?
+  @objc public var deviceId: Swift.String?
+  @objc public var productVersion: Swift.String?
+  @objc public var webType: iOS_DCA_SDK.DCASDKEBTYPE
+  @objc public var aliasKey: Swift.String?
+  @objc public var manufacture: Swift.String?
+  @objc public var isHiddenTitle: Swift.Bool
+  @objc public var isUseCustomWebViewFrame: Swift.Bool
+  @objc public var webViewFrame: CoreGraphics.CGRect
+  @objc public var searchContent: Swift.String?
+  @objc public var urlContent: Swift.String?
+  @objc public var theme: Swift.String?
+  @objc public var themeColor: UIKit.UIColor?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class DCAVoiceCopyManager : ObjectiveC.NSObject {
+  @objc public func getText(productId: Swift.String, callBack: @escaping ((Swift.String, Swift.String, [iOS_DCA_SDK.VoiceCopyTextModel]?) -> ()))
+  @objc public func upload(request: iOS_DCA_SDK.UploadRequestModel, callBack: @escaping ((Foundation.NSDictionary?) -> ()))
+  @objc public func training(request: iOS_DCA_SDK.TrainRequestModel, callBack: @escaping ((Foundation.NSDictionary?) -> ()))
+  @objc public func queryTask(productId: Swift.String, callBack: @escaping ((Foundation.NSDictionary?) -> ()))
+  @objc public func deleteTone(request: iOS_DCA_SDK.DeleteRequestModel, callBack: @escaping ((Foundation.NSDictionary?) -> ()))
+  @objc public func updateCustomInfo(productId: Swift.String, taskId: Swift.String, customInfo: Swift.String, callBack: @escaping ((Foundation.NSDictionary?) -> ()))
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public enum ResCommType : Swift.Int {
+  case STORY = 1
+  case GUO_XUE = 2
+  case CHILD_SONG = 3
+  case POETRY = 4
+  case XIANG_SHENG = 5
+  case XIAO_PIN = 6
+  case PING_SHU = 7
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum HiFiSearchType : Swift.Int {
+  case ALL = 0
+  case ALBUM = 1
+  case SONG = 5
+  case ARTIST = 10
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+}
+@objc public enum SearchType : Swift.Int {
+  case HIFISONG = 1
+  case HIFIALBUM = 2
+  case QUYI = 3
+  case BOOK = 4
+  case NEWS = 5
+  case STORY = 6
+  case GUOXUE = 7
+  case CHILDSONG = 8
+  case POETRY = 9
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class DCAMediaResourceManager : ObjectiveC.NSObject {
+  @objc public func getBatchList(type: Swift.String, page: Swift.Int, count: Swift.Int, callBack: @escaping ((Swift.String, Swift.String, [iOS_DCA_SDK.ChildBatchListModel]?) -> ()))
+  @objc public func getBatchDetail(type: Swift.String, moduleID: Swift.String, page: Swift.Int, count: Swift.Int, callBack: @escaping ((Swift.String, Swift.String, Swift.Int, [iOS_DCA_SDK.ChildBatchDetailModel]?) -> ()))
+  @objc public func getAlbumBrowse(batchModel: iOS_DCA_SDK.ChildBatchListModel, albumModel: iOS_DCA_SDK.ChildBatchDetailModel, page: Swift.Int, count: Swift.Int, callBack: @escaping ((Swift.String, Swift.String, Swift.Int, [iOS_DCA_SDK.ChildAlbumBrowseModel]?) -> ()))
+  @objc public func getSearchData(q: Swift.String, page: Swift.Int, count: Swift.Int, callBack: @escaping ((Swift.String, Swift.String, Swift.Int, [iOS_DCA_SDK.ChildAlbumBrowseModel]?) -> ()))
+  @objc public func getTVShowList(callBack: @escaping ((Swift.String, Swift.String, [iOS_DCA_SDK.TVShowModel]?) -> ()))
+  @objc public func getTVBatchList(type: Swift.String, callBack: @escaping ((Swift.String, Swift.String, [iOS_DCA_SDK.TVBatchListModel]?) -> ()))
+  @objc public func getTVBatchDetail(tag: Swift.String, type: Swift.String, page: Swift.Int, count: Swift.Int, callBack: @escaping ((Swift.String, Swift.String, Swift.Int, [iOS_DCA_SDK.TVDetailModel]?) -> ()))
+  @objc public func getCompleteSystemRecommend(age: Swift.String, callBack: @escaping ((Swift.String, Swift.String, [iOS_DCA_SDK.PBRecommendTypeModel]?) -> ()))
+  @objc public func getRecommendDetailed(recommendId: Swift.String, type: Swift.Int, callBack: @escaping ((Swift.String, Swift.String, [iOS_DCA_SDK.PBRecommendListModel]?) -> ()))
+  @objc public func getMiniProgramBookInfo(recommendId: Swift.String, picBookId: Swift.String, callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.PBRecommendDetailModel?) -> ()))
+  @objc public func getUserReadRcord(callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.PBReadRecordModel?) -> ()))
+  @objc public func getUserReadDetail(dateStr: Swift.String, callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.PBReadRecordDetailModel?) -> ()))
+  @objc public func savePicBookReadRecord(model: iOS_DCA_SDK.PBRecommendListModel, beginTimeStr: Swift.String, endTimeStr: Swift.String, pageTimeList: Foundation.NSArray, callBack: @escaping ((Swift.String, Swift.String) -> ()))
+  @objc public func getCommResAlbums(type: iOS_DCA_SDK.ResCommType, page: Swift.Int, pageSize: Swift.Int, callBack: @escaping (Swift.String, Swift.String, [iOS_DCA_SDK.ResAlbumModel]?) -> ())
+  @objc public func getCommResTracks(type: iOS_DCA_SDK.ResCommType, albumId: Swift.String, page: Swift.Int, pageSize: Swift.Int, callBack: @escaping (Swift.String, Swift.String, [iOS_DCA_SDK.ResMusicModel]?) -> ())
+  @objc public func getNewsCategory(callBack: @escaping (Swift.String, Swift.String, [iOS_DCA_SDK.ResNewsCateListModel]?) -> ())
+  @objc public func getNews(catId: Swift.String, pageSize: Swift.Int, callBack: @escaping (Swift.String, Swift.String, [iOS_DCA_SDK.ResNewsListModel]?) -> ())
+  @objc public func getRadioCategory(callBack: @escaping (Swift.String, Swift.String, [iOS_DCA_SDK.ResRadioCateListModel]?) -> ())
+  @objc public func getRadio(catId: Swift.String, callBack: @escaping (Swift.String, Swift.String, [iOS_DCA_SDK.ResRadioListModel]?) -> ())
+  @objc public func searchAlbums(title: Swift.String, page: Swift.Int, pageSize: Swift.Int, callBack: @escaping (Swift.String, Swift.String, [iOS_DCA_SDK.ResAlbumModel]?) -> ())
+  @objc public func getTracksBySearchAlbumId(albumId: Swift.String, page: Swift.Int, pageSize: Swift.Int, callBack: @escaping (Swift.String, Swift.String, [iOS_DCA_SDK.ResMusicModel]?) -> ())
+  @objc public func searchTracks(title: Swift.String, page: Swift.Int, pageSize: Swift.Int, callBack: @escaping (Swift.String, Swift.String, [iOS_DCA_SDK.ResMusicModel]?) -> ())
+  @objc public func searchStory(title: Swift.String, tags: Swift.String, page: Swift.Int, pageSize: Swift.Int, callBack: @escaping (Swift.String, Swift.String, [iOS_DCA_SDK.ResMusicModel]?) -> ())
+  @objc public func getLetingCatalogs(uid: Swift.String, productId: Swift.String, callBack: @escaping (Swift.String, Swift.String, [iOS_DCA_SDK.LetingCateModel]?) -> ())
+  @objc public func getLetingVideoByCatalogId(request: iOS_DCA_SDK.GetVideoRequest, callBack: @escaping (Swift.String, Swift.String, [iOS_DCA_SDK.LetingVideoModel]?) -> ())
+  @objc public func searchLetingVideo(request: iOS_DCA_SDK.SearchVideoRequest, callBack: @escaping (Swift.String, Swift.String, [iOS_DCA_SDK.LetingVideoModel]?) -> ())
+  @objc public func letingFeedback(uid: Swift.String, productId: Swift.String, feedback: iOS_DCA_SDK.FeedBack, callBack: @escaping (Swift.String, Swift.String, Foundation.NSDictionary?) -> ())
+  @objc public func getIDaddyCategory(productId: Swift.String, deviceId: Swift.String, callBack: @escaping (Swift.String, Swift.String, [iOS_DCA_SDK.ResIdaddyCatesModel]?) -> ())
+  @objc public func getIDaddyAlbum(albumRequest: iOS_DCA_SDK.IDaddyAlbumRequest, callBack: @escaping (Swift.String, Swift.String, [iOS_DCA_SDK.ResAlbumModel]?) -> ())
+  @objc public func getIDaddyTrack(trackRequest: iOS_DCA_SDK.IDaddyTrackRequest, callBack: @escaping (Swift.String, Swift.String, [iOS_DCA_SDK.ResMusicModel]?) -> ())
+  @objc public func searchIDaddyAlbum(searchRequest: iOS_DCA_SDK.IDaddySearchAlbumRequest, callBack: @escaping (Swift.String, Swift.String, [iOS_DCA_SDK.ResAlbumModel]?) -> ())
+  @objc public func searchIDaddyTrack(searchRequest: iOS_DCA_SDK.IDaddySearchTrackRequest, callBack: @escaping (Swift.String, Swift.String, [iOS_DCA_SDK.ResMusicModel]?) -> ())
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public enum ConnectStatus : Swift.Int {
+  case CONNECT_SUCCESS = 1
+  case CONNECT_FAIL = 2
+  case SUBSCRIBE_SUCCESS = 3
+  case UNSUBSCRIBE_SUCCESS = 4
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum PlayStatus : Swift.Int {
+  case APP_OTHER_TYPE = -1
+  case APP_OFFLINE = 0
+  case APP_ONLINE = 1
+  case APP_PLAY = 2
+  case APP_SUSPEND = 3
+  case APP_CONTINUE_PLAY = 4
+  case APP_NEXT = 5
+  case APP_PREV = 6
+  case APP_SOUND = 7
+  case APP_DOWNLOAD_STATE = 8
+  case APP_PLAY_MODE = 9
+  case APP_BLUETOOTH_NEXT = 10
+  case APP_BLUETOOTH_PREV = 11
+  case APP_BLUETOOTH_SUSPEND = 12
+  case APP_BLUETOOTH_CONTINUE = 13
+  case APP_BLUETOOTH = 14
+  case APP_DRAG = 15
+  case APP_UNBIND = 16
+  case APP_STATE = 17
+  case APP_LIKE = 18
+  case APP_CANCEL_LIKE = 19
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class DCADeviceControlManager : ObjectiveC.NSObject {
+  @objc public var isConnect: Swift.Bool
+  @objc public func connect(connectStatus: ((iOS_DCA_SDK.ConnectStatus) -> ())?)
+  @objc public func subscribeTopic(topic: Swift.String?)
+  @objc public func sendData(topic: Swift.String?, jsonStr: Swift.String?, isRetain: Swift.Bool)
+  @objc public func unSubscribeTopic(topic: Swift.String?)
+  @objc public func disconnect()
+  @objc public func onReceiveControlMessage(receiveMessage: ((iOS_DCA_SDK.PlayStatus, Foundation.NSDictionary) -> ())?)
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension DCADeviceControlManager {
+  @objc dynamic public func pausePlay(callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc dynamic public func continuePlay(callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc dynamic public func playPreviousMusic(callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc dynamic public func playNextMusic(callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc dynamic public func getPlayList(page: Swift.Int, count: Swift.Int, callBack: @escaping ((Swift.String, Swift.String, Swift.Int, Swift.Int, [iOS_DCA_SDK.ChildAlbumBrowseModel]?) -> ()))
+  @objc dynamic public func cleanPlayList(callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc dynamic public func getCurrentPlayIndex(callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc dynamic public func getCurrentPlayModel(callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc dynamic public func setPlayModel(curmodel: Swift.String, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc dynamic public func playMusicFromPlayList(sort: Swift.String, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc dynamic public func getVolume(callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc dynamic public func setVolume(volume: Swift.Int, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc dynamic public func playMuiscFromList(model: iOS_DCA_SDK.ChildAlbumBrowseModel, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc dynamic public func playMuiscFromAlbumList(information: Swift.String, model: iOS_DCA_SDK.ChildBatchDetailModel, index: Swift.Int, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc dynamic public func pushTolistAndPlay(index: Swift.Int, musicType: Swift.String, list: [iOS_DCA_SDK.ChildAlbumBrowseModel], callBack: @escaping ((Swift.String, Swift.String) -> ()))
+  @objc dynamic public func playCollectionList(callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+}
+@objc public enum BleNetworkState : Swift.Int {
+  case BleNetworkSuccess = 0
+  case BleNetworkFailure = 1
+  case BleNetworkConnecting = 2
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ReceiveState : Swift.Int {
+  case ReceiveSuccess = 0
+  case ReceiveFailure = 1
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum BluetoothState : Swift.Int {
+  case BluetoothOpen = 0
+  case BluetoothClose = 1
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class DCABleNetManager : ObjectiveC.NSObject {
+  @objc public func getDeviceId(bleDeviceID: ((Swift.String) -> ())?)
+  @objc public func initBleNetwork(bleState: ((iOS_DCA_SDK.BluetoothState) -> ())?)
+  @objc public func startDiscoverBle(bleData: ((Foundation.NSDictionary) -> ())?)
+  @objc public func sendDataToDevice(peripheral: CoreBluetooth.CBPeripheral, ssid: Swift.String, pwd: Swift.String, vc: UIKit.UIViewController, bleNetResult: @escaping (iOS_DCA_SDK.BleNetworkState, Swift.String, Foundation.NSDictionary) -> ())
+  @objc public func sendWifiInfoToDevice(peripheral: CoreBluetooth.CBPeripheral, ssid: Swift.String, pwd: Swift.String, vc: UIKit.UIViewController, receiveResult: @escaping (iOS_DCA_SDK.ReceiveState, Swift.String) -> ())
+  @objc public func stopDiscoverBle()
+  @objc public func deallocBleNetwork()
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public enum EvnType : Swift.Int {
+  case DEV = 1
+  case TEST = 2
+  case BETA = 3
+  case DUI = 4
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol DCAManagerDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func onNeedLogin()
+}
+@objc @_inheritsConvenienceInitializers public class DCAManager : ObjectiveC.NSObject {
+  @objc public class var shared: iOS_DCA_SDK.DCAManager {
+    @objc get
+  }
+  @objc weak public var delegate: iOS_DCA_SDK.DCAManagerDelegate?
+  @objc public var deviceId: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc public var accountManager: iOS_DCA_SDK.DCAAccountManager
+  @objc public var appManager: iOS_DCA_SDK.DCAAppManager
+  @objc public var userManager: iOS_DCA_SDK.DCAUserManager
+  @objc public var mediaResourceManager: iOS_DCA_SDK.DCAMediaResourceManager
+  @objc public var deviceManager: iOS_DCA_SDK.DCADeviceManager
+  @objc public var smartHomeManager: iOS_DCA_SDK.DCASmartHomeManager
+  @objc public var skillManager: iOS_DCA_SDK.DCASkillManager
+  @objc public var deviceControlManager: iOS_DCA_SDK.DCADeviceControlManager
+  @objc public var bleNetManager: iOS_DCA_SDK.DCABleNetManager
+  @objc public var sonicNetManager: iOS_DCA_SDK.DCASonicNetManager
+  @objc public var apNetManager: iOS_DCA_SDK.DCAAPNetManager
+  @objc public var voiceCopyManager: iOS_DCA_SDK.DCAVoiceCopyManager
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension DCAManager {
+  @objc dynamic public func setEnv(evn: iOS_DCA_SDK.EvnType)
+  @objc dynamic public func sdkPrintLog(isPrint: Swift.Bool)
+  @objc dynamic public func initialize(apiKey: Swift.String, apiSecret: Swift.String)
+  @objc dynamic public func getSDKVersion() -> Swift.String
+}
+@objc public protocol DCASDKWebViewControllerDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func quitDCASDKWebViewViewController()
+  @objc optional func onTitleChange(title: Swift.String)
+  @objc optional func webViewHasDevice(param: Swift.Bool)
+  @objc optional func webViewOpenNewTab(param: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers public class DCASDKWebViewController : UIKit.UIViewController {
+  @objc public var webInfo: iOS_DCA_SDK.DCAWebViewInfo?
+  @objc weak public var delegate: iOS_DCA_SDK.DCASDKWebViewControllerDelegate?
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension DCASDKWebViewController {
+  @objc dynamic public func loadH5()
+  @objc dynamic public func loadH5WithUrl(urlStr: Swift.String)
+  @objc dynamic public func setAccessToken(token: Swift.String)
+  @objc dynamic public func registerTheme(theme: Swift.String)
+  @objc dynamic public func webViewCanGoBack() -> Swift.Bool
+  @objc dynamic public func webViewBack()
+  @objc dynamic public func setWebViewFrame(frame: CoreGraphics.CGRect)
+}
+extension DCASDKWebViewController : UIKit.UIWebViewDelegate, WebKit.WKNavigationDelegate {
+  @objc dynamic public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
+  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
+}
+extension DCASDKWebViewController : WebKit.WKScriptMessageHandler {
+  @objc dynamic public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+}
+@objc @_inheritsConvenienceInitializers public class VoiceCopyModel : ObjectiveC.NSObject {
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class VoiceCopyTextModel : ObjectiveC.NSObject {
+  @objc public var textId: Swift.String?
+  @objc public var text: Swift.String?
+  @objc override dynamic public init()
+  convenience public init(id: Swift.String, text: Swift.String)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class UploadRequestModel : ObjectiveC.NSObject {
+  @objc public var productId: Swift.String?
+  @objc public var textId: Swift.String?
+  @objc public var gender: Swift.String?
+  @objc public var age: Swift.String
+  @objc public var data: Foundation.Data?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class TrainRequestModel : ObjectiveC.NSObject {
+  @objc public var productId: Swift.String?
+  @objc public var gender: Swift.String?
+  @objc public var age: Swift.String?
+  @objc public var customInfo: Swift.String?
+  @objc public var audio_list: Swift.Array<Swift.String>?
+  @objc public var pre_tts_text: Swift.Array<Swift.String>?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class DeleteRequestModel : ObjectiveC.NSObject {
+  @objc public var productId: Swift.String?
+  @objc public var taskId: Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class DCASkillManager : ObjectiveC.NSObject {
+  @objc public func querySkillListByProductVersion(productId: Swift.String, productVersion: Swift.String, callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc public func querySkillListByAliasKey(productId: Swift.String, aliasKey: Swift.String, callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc public func querySkillDetail(skillId: Swift.String, skillVersion: Swift.String, callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc public func querySkillDetails(list: [iOS_DCA_SDK.SkillDetailRequest], callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum SonicNetworkState : Swift.Int {
+  case SonicNetworkSuccess = 0
+  case SonicNetworkFailure = 1
+  case SonicNetworkConnecting = 2
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class DCASonicNetManager : ObjectiveC.NSObject {
+  @objc public func initSonicNetwork()
+  @objc public func startSonicNetwork(wifiStr: Swift.String, pwd: Swift.String, sonicNetResult: ((iOS_DCA_SDK.SonicNetworkState, Swift.String, Foundation.NSDictionary) -> ())?)
+  @objc public func stopSonicNetwork()
+  @objc public func deallocSonicNetwork()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class EquSmartDeviceListModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var productType: Swift.String?
+  @objc public var productTypeCode: Swift.String?
+  @objc public var image: Swift.String?
+  @objc public var deviceName: Swift.String?
+  @objc public var appId: Swift.String?
+  @objc public var secret: Swift.String?
+  @objc public var company: Swift.String?
+  @objc public var hide: Swift.Int
+  @objc public var config: iOS_DCA_SDK.DeviceProductConfigModel?
+  @objc public var odmConfig: iOS_DCA_SDK.OdmConfigModel?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class DeviceProductConfigModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var subtitle: Swift.String?
+  @objc public var title: Swift.String?
+  @objc public var scope: iOS_DCA_SDK.DeviceConfigScopeModel?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class DeviceConfigScopeModel : ObjectiveC.NSObject {
+  @objc public var bind_ble: Swift.Int
+  @objc public var bind_sound: Swift.Int
+  @objc public var bind_wifiap: Swift.Int
+  @objc public var bind_scan: Swift.Int
+  @objc public var res_children: Swift.Int
+  @objc public var res_fm: Swift.Int
+  @objc public var res_book: Swift.Int
+  @objc public var res_shows: Swift.Int
+  @objc public var res_tv_play: Swift.Int
+  @objc public var res_movie: Swift.Int
+  @objc public var setting_wifi_rest: Swift.Int
+  @objc public var setting_ble: Swift.Int
+  @objc public var setting_sound: Swift.Int
+  @objc public var setting_dev_name: Swift.Int
+  @objc public var setting_unbind: Swift.Int
+  @objc public var setting_reset: Swift.Int
+  @objc public var setting_reconnect: Swift.Int
+  @objc public var dev_talklog: Swift.Int
+  @objc public var dev_im: Swift.Int
+  @objc public var dev_contact_video: Swift.Int
+  @objc public var dev_contact_voice: Swift.Int
+  @objc public var dev_contact_chat: Swift.Int
+  @objc public var dev_family_list: Swift.Int
+  @objc public var dev_custom_qa: Swift.Int
+  @objc public var dev_custom_command: Swift.Int
+  @objc public var dev_remind: Swift.Int
+  @objc public var dev_clock: Swift.Int
+  @objc public var device_info: Swift.Int
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class OdmConfigModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var personality: iOS_DCA_SDK.PersonalityModel?
+  @objc public var pages: [iOS_DCA_SDK.PagesModel]?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class PersonalityModel : ObjectiveC.NSObject {
+  @objc public var icon: Swift.String?
+  @objc public var subColor: Swift.String?
+  @objc public var network: Foundation.NSArray?
+  @objc public var viceTitle: Swift.String?
+  @objc public var title: Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class PagesModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var name: Swift.String?
+  @objc public var defaultIcon: Swift.String?
+  @objc public var selectIcon: Swift.String?
+  @objc public var page: Swift.Int
+  @objc public var category: [iOS_DCA_SDK.ODMPagesCategoryModel]?
+  @objc public var functions: [iOS_DCA_SDK.ODMFunctiongsModel]?
+  @objc public var settings: [iOS_DCA_SDK.ODMSettingsModel]?
+  @objc public var personalCenter: [iOS_DCA_SDK.ODMFunctiongsModel]?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ODMPagesCategoryModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var catId: Swift.Int
+  @objc public var name: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ODMSettingsModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var setId: Swift.Int
+  @objc public var name: Swift.String?
+  @objc public var icon: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ODMFunctiongsModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var funId: Swift.Int
+  @objc public var name: Swift.String?
+  @objc public var icon: Swift.String?
+  @objc public var type: Swift.Int
+  @objc public var url: Swift.String?
+  @objc public var text: Swift.String?
+  @objc public var page: Swift.Int
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class EquipDeviceInfoModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var volume: Swift.Float
+  @objc public var bluetooth: Swift.Bool
+  @objc public var hasBattery: Swift.Bool
+  @objc public var wifiState: Swift.Bool
+  @objc public var wifiSsid: Swift.String?
+  @objc public var battery: Swift.Int
+  @objc public var playlistCount: Swift.Int
+  @objc public var version: Swift.String?
+  @objc public var wakeUp: Swift.Int
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class EquipAlarmModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var alarmId: Swift.String?
+  @objc public var deviceId: Swift.String?
+  @objc public var date: Swift.String?
+  @objc public var time: Swift.String?
+  @objc public var timestamp: Swift.String?
+  @objc public var event: Swift.String?
+  @objc public var repeatS: Swift.String?
+  @objc public var isSelected: Swift.Bool
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class EquipRemindModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var createdTime: Swift.String?
+  @objc public var date: Swift.String?
+  @objc public var deviceId: Swift.String?
+  @objc public var event: Swift.String?
+  @objc public var remindId: Swift.String?
+  @objc public var object: Swift.String?
+  @objc public var repeatS: Swift.String?
+  @objc public var time: Swift.String?
+  @objc public var timestamp: Swift.String?
+  @objc public var vid: Swift.String?
+  @objc public var isSelected: Swift.Bool
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class EquipVoiceMessageModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var voiceId: Swift.Int
+  @objc public var senderId: Swift.String?
+  @objc public var senderAvatarUrl: Swift.String?
+  @objc public var senderName: Swift.String?
+  @objc public var type: Swift.String?
+  @objc public var text: Swift.String?
+  @objc public var voiceUrl: Swift.String?
+  @objc public var duration: Swift.Int
+  @objc public var createdTime: Swift.String?
+  @objc public var readed: Swift.Int
+  @objc public var content: Swift.String?
+  @objc public var groupType: Swift.Int
+  @objc public var isPlayAnimation: Swift.Bool
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class EquCallRecordListModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var recordId: Swift.String?
+  @objc public var srcId: Swift.String?
+  @objc public var targetId: Swift.String?
+  @objc public var type: Swift.String?
+  @objc public var talkTime: Swift.Int
+  @objc public var state: Swift.Int
+  @objc public var createdTime: Swift.String?
+  @objc public var isRead: Swift.Bool
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class FamilyAddressBookListModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var userId: Swift.String?
+  @objc public var createdTime: Swift.String?
+  @objc public var ownerId: Swift.String?
+  @objc public var relation: Swift.String?
+  @objc public var fbId: Swift.String?
+  @objc public var nickname: Swift.String?
+  @objc public var state: Swift.String?
+  @objc public var phone: Swift.String?
+  @objc public var head: Swift.String?
+  @objc public var isSelected: Swift.Bool
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class FamilyRelationshipListModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var frId: Swift.String?
+  @objc public var name: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class FamilyGroupChatListModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var createdTime: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public var chatId: Swift.Int
+  @objc public var ownerId: Swift.String?
+  @objc public var number: Swift.Int
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class FGCDetailListModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var voiceUrl: Swift.String?
+  @objc public var targetId: Swift.String?
+  @objc public var fgcId: Swift.Int
+  @objc public var srcId: Swift.String?
+  @objc public var duration: Swift.Int
+  @objc public var groupId: Swift.Int
+  @objc public var createdTime: Swift.String?
+  @objc public var groupTalk: Swift.Int
+  @objc public var srcUser: iOS_DCA_SDK.UserInfoModel?
+  @objc public var isPlayAnimation: Swift.Bool
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class QuickCreateRequest : ObjectiveC.NSObject {
+  @objc public var sentences: Foundation.NSArray?
+  @objc public var commands: Foundation.NSArray?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class CommandRequest : ObjectiveC.NSObject {
+  @objc public var text: Swift.String?
+  @objc public var type: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class InstructionModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var instructionId: Swift.String?
+  @objc public var sentences: Foundation.NSArray?
+  @objc public var commands: Foundation.NSArray?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class QaInitModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var productId: Swift.String?
+  @objc public var productName: Swift.String?
+  @objc public var productType: Swift.String?
+  @objc public var publicKey: Swift.String?
+  @objc public var secretKey: Swift.String?
+  @objc public var skillIds: Foundation.NSArray?
+  @objc public var topicIds: Foundation.NSArray?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class QaTopicKnowledgeModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var topicKnowledgeId: Swift.String?
+  @objc public var topicId: Swift.String?
+  @objc public var kId: Swift.String?
+  @objc public var kType: Swift.Bool
+  @objc public var productId: Swift.String?
+  @objc public var skillId: Swift.String?
+  @objc public var weight: Swift.String?
+  @objc public var createBy: Swift.String?
+  @objc public var createDate: Swift.String?
+  @objc public var updateBy: Swift.String?
+  @objc public var updateDate: Swift.String?
+  @objc public var deleteBy: Swift.String?
+  @objc public var deleteDate: Swift.String?
+  @objc public var deleteFlag: Swift.Bool
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class QaQuestionModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var qID: Swift.String?
+  @objc public var productId: Swift.String?
+  @objc public var skillId: Swift.String?
+  @objc public var topicId: Swift.String?
+  @objc public var kId: Swift.String?
+  @objc public var questionId: Swift.String?
+  @objc public var questionName: Swift.String?
+  @objc public var primaryFlag: Swift.Bool
+  @objc public var diffusionFlag: Swift.Bool
+  @objc public var createBy: Swift.String?
+  @objc public var createDate: Swift.String?
+  @objc public var updateBy: Swift.String?
+  @objc public var updateDate: Swift.String?
+  @objc public var deleteBy: Swift.String?
+  @objc public var deleteDate: Swift.String?
+  @objc public var deleteFlag: Swift.Bool
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class QaAnswerModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var aID: Swift.String?
+  @objc public var productId: Swift.String?
+  @objc public var skillId: Swift.String?
+  @objc public var topicId: Swift.String?
+  @objc public var kId: Swift.String?
+  @objc public var answerId: Swift.String?
+  @objc public var answerName: Swift.String?
+  @objc public var mobileClient: Swift.Bool
+  @objc public var pcClient: Swift.Bool
+  @objc public var imageUrl: Swift.String?
+  @objc public var linkUrl: Swift.String?
+  @objc public var weight: Swift.String?
+  @objc public var primaryFlag: Swift.Bool
+  @objc public var createBy: Swift.String?
+  @objc public var createDate: Swift.String?
+  @objc public var updateBy: Swift.String?
+  @objc public var updateDate: Swift.String?
+  @objc public var deleteBy: Swift.String?
+  @objc public var deleteDate: Swift.String?
+  @objc public var deleteFlag: Swift.Bool
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class QaInfoModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var productId: Swift.String?
+  @objc public var skillId: Swift.String?
+  @objc public var topicId: Swift.String?
+  @objc public var kId: Swift.String?
+  @objc public var topicKnowledgeModel: iOS_DCA_SDK.QaTopicKnowledgeModel?
+  @objc public var question: [iOS_DCA_SDK.QaQuestionModel]?
+  @objc public var answer: [iOS_DCA_SDK.QaAnswerModel]?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class GetCodeRequestModel : ObjectiveC.NSObject {
+  @objc public var userName: Swift.String?
+  @objc public var type: iOS_DCA_SDK.SMSCODETYPE
+  @objc public var channel: Swift.String
+  @objc public var signName: Swift.String
+  @objc public var templateCode: Swift.String
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class AccountModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var isNewUser: Swift.Bool
+  @objc public var userId: Swift.String?
+  @objc public var pwCredential: Swift.String?
+  @objc public var TOKEN: iOS_DCA_SDK.AccountTokenModel?
+  @objc public var RmemAuth: iOS_DCA_SDK.AccountRmemAuthModel?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class AccountRmemAuthModel : ObjectiveC.NSObject {
+  @objc public var value: Swift.String?
+  @objc public var expire_in: Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class AccountTokenModel : ObjectiveC.NSObject {
+  @objc public var value: Swift.String?
+  @objc public var expire_in: Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class UserInfoModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var createdTime: Swift.String?
+  @objc public var phone: Swift.String?
+  @objc public var pId: Swift.String?
+  @objc public var sex: Swift.Int
+  @objc public var userId: Swift.String?
+  @objc public var token: Swift.String?
+  @objc public var qrCode: Swift.String?
+  @objc public var accId: Swift.String?
+  @objc public var address: Swift.String?
+  @objc public var nickName: Swift.String?
+  @objc public var head: Swift.String?
+  @objc public var appId: Swift.String?
+  @objc public var birthday: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class EquipDeviceListModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var deviceType: Swift.String?
+  @objc public var deviceAlias: Swift.String?
+  @objc public var deviceName: Swift.String?
+  @objc public var deviceInfo: iOS_DCA_SDK.DeviceInfoModel?
+  @objc public var apiKey: Swift.String?
+  @objc public var isDefault: Swift.Bool
+  @objc public var accId: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class DeviceInfoModel : ObjectiveC.NSObject {
+  @objc public var productId: Swift.String?
+  @objc public var appId: Swift.String?
+  @objc public var imageUrl: Swift.String?
+  @objc public var platform: Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class WeChatLoginRequest : ObjectiveC.NSObject {
+  @objc public var unionId: Swift.String?
+  @objc public var openId: Swift.String?
+  @objc public var nickName: Swift.String?
+  @objc public var headImgUrl: Swift.String?
+  @objc public var channel: Swift.String
+  @objc public var allowCreate: Swift.Bool
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class LinkPhoneRequest : ObjectiveC.NSObject {
+  @objc public var unionId: Swift.String?
+  @objc public var openId: Swift.String?
+  @objc public var nickName: Swift.String?
+  @objc public var headImgUrl: Swift.String?
+  @objc public var channel: Swift.String
+  @objc public var mobile: Swift.String?
+  @objc public var smsCode: Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class LoginRequest : ObjectiveC.NSObject {
+  @objc public var userName: Swift.String?
+  @objc public var password: Swift.String?
+  @objc public var smsCode: Swift.String?
+  @objc public var channel: Swift.String
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class VerifyRequest : ObjectiveC.NSObject {
+  @objc public var userName: Swift.String?
+  @objc public var smsCode: Swift.String?
+  @objc public var channel: Swift.String
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class InitPasswordRequest : ObjectiveC.NSObject {
+  @objc public var userName: Swift.String?
+  @objc public var password: Swift.String?
+  @objc public var pwCredential: Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class SetPasswordRequest : ObjectiveC.NSObject {
+  @objc public var userId: Swift.String?
+  @objc public var token: Swift.String?
+  @objc public var password: Swift.String?
+  @objc public var channel: Swift.String
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class QuickLoginRequest : ObjectiveC.NSObject {
+  @objc public var accesToken: Swift.String?
+  @objc public var channel: Swift.String
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public enum APNetworkState : Swift.Int {
+  case APNetworkSuccess = 0
+  case APNetworkFailure = 1
+  case APNetworkConnecting = 2
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class DCAAPNetManager : ObjectiveC.NSObject {
+  @objc public var urlStr: Swift.String
+  @objc public var deviceWifiName: Swift.String
+  @objc public func startAPNetwork(wifiStr: Swift.String, pwd: Swift.String, apNetResult: ((iOS_DCA_SDK.APNetworkState, Swift.String, Foundation.NSDictionary) -> ())?)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class HiFiSearchModel : ObjectiveC.NSObject {
+  @objc public var Imgurl: Swift.String?
+  @objc public var albumname: Swift.String?
+  @objc public var artistname: Swift.String?
+  @objc public var contentid: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public var type: Swift.Int
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class BookSearchModel : ObjectiveC.NSObject {
+  @objc public var announcer: Swift.String?
+  @objc public var author: Swift.String?
+  @objc public var cover: Swift.String?
+  @objc public var desc: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public var musicId: Swift.String?
+  @objc public var typeName: Swift.String?
+  @objc public var typeId: Swift.String?
+  @objc public var state: Swift.Int
+  @objc override dynamic public init()
+  required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  public func encode(with aCoder: Foundation.NSCoder)
+  public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class NewsSearchModel : ObjectiveC.NSObject {
+  @objc public var audio: Swift.String?
+  @objc public var albumId: Swift.String?
+  @objc public var duration: Swift.Double
+  @objc public var human_time: Swift.String?
+  @objc public var image: Swift.String?
+  @objc public var sid: Swift.String?
+  @objc public var source: Swift.String?
+  @objc public var title: Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class OtherSearchModel : ObjectiveC.NSObject {
+  @objc public var albumId: Swift.String?
+  @objc public var albumTitle: Swift.String?
+  @objc public var artist: Swift.String?
+  @objc public var author: Swift.String?
+  @objc public var coverUrlLarge: Swift.String?
+  @objc public var coverUrlMiddle: Swift.String?
+  @objc public var coverUrlSmall: Swift.String?
+  @objc public var duration: Swift.Double
+  @objc public var episode: Swift.String?
+  @objc public var playUrl64: Swift.String?
+  @objc public var source: Swift.String?
+  @objc public var sourceId: Swift.String?
+  @objc public var trackIntro: Swift.String?
+  @objc public var trackTags: Swift.String?
+  @objc public var trackTitle: Swift.String?
+  @objc public var type: Swift.String?
+  @objc public var musicId: Swift.String?
+  @objc override dynamic public init()
+  required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  public func encode(with aCoder: Foundation.NSCoder)
+  public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class SearchModel : ObjectiveC.NSObject {
+  @objc public var hifiSearchModel: [iOS_DCA_SDK.HiFiSearchModel]?
+  @objc public var otherSearchModel: [iOS_DCA_SDK.OtherSearchModel]?
+  @objc public var newsSearchModel: [iOS_DCA_SDK.NewsSearchModel]?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ChildBatchDetailModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var aboumId: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public var front_url: Swift.String?
+  @objc public var author: Swift.String?
+  @objc public var duration: Swift.Double
+  @objc public var des: Swift.String?
+  @objc public var source: Swift.String?
+  @objc public var type: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ChildBatchListModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var ID: Swift.String?
+  @objc public var mouldName: Swift.String?
+  @objc public var mouldType: Swift.String?
+  @objc public var albumType: Swift.String?
+  @objc public var data: [iOS_DCA_SDK.ChildBatchDetailModel]?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ChildAlbumBrowseModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var musicId: Swift.String?
+  @objc public var musicTitle: Swift.String?
+  @objc public var musicType: Swift.String?
+  @objc public var artistsName: Swift.String?
+  @objc public var albumName: Swift.String?
+  @objc public var duration: Swift.Double
+  @objc public var play_url: Swift.String?
+  @objc public var isfav: Swift.Bool
+  @objc public var isplay: Swift.Bool
+  @objc public var cover_url_middle: Swift.String?
+  @objc public var cover_url_large: Swift.String?
+  @objc public var sort: Swift.String?
+  @objc public var isOwn: Swift.Bool
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ChildCarouselModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var type: Swift.String?
+  @objc public var title: Swift.String?
+  @objc public var imgUrl: Swift.String?
+  @objc public var position: Swift.Int
+  @objc public var redirection: Swift.String?
+  @objc public var albumId: Swift.String?
+  @objc public var information: Swift.String?
+  @objc public var source: Swift.String?
+  @objc public var stype: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class TVShowModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var beginTime: Swift.String?
+  @objc public var detail: Swift.String?
+  @objc public var endTime: Swift.String?
+  @objc public var showId: Swift.Int
+  @objc public var img: Swift.String?
+  @objc public var introduction: Swift.String?
+  @objc public var state: Swift.Int
+  @objc public var title: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class epInfoModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var epOrder: Swift.Int
+  @objc public var year: Swift.String?
+  @objc public var epIsVip: Swift.Int
+  @objc public var epLen: Swift.Int
+  @objc public var epPicUrl: Swift.String?
+  @objc public var videoId: Swift.String?
+  @objc public var type: Swift.String?
+  @objc public var epName: Swift.String?
+  @objc public var epType: Swift.Int
+  @objc public var epFocus: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class iqiyiMediaModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var albumId: Swift.String?
+  @objc public var videoId: Swift.String?
+  @objc public var hot: Swift.Int
+  @objc public var type: Swift.String?
+  @objc public var isVip: Swift.Int
+  @objc public var effective: Swift.Int
+  @objc public var picUrl: Swift.String?
+  @objc public var playCount: Swift.Int
+  @objc public var sourceCode: Swift.Int
+  @objc public var focusName: Swift.String?
+  @objc public var posterUrl: Swift.String?
+  @objc public var epProbation: Swift.Int
+  @objc public var series: Swift.Int
+  @objc public var channelId: Swift.Int
+  @objc public var desc: Swift.String?
+  @objc public var epInfo: [iOS_DCA_SDK.epInfoModel]?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class vstMediaModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var playCount: Swift.String?
+  @objc public var posterUrl: Swift.String?
+  @objc public var videoId: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class TVDetailModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var screenwriter: Foundation.NSArray?
+  @objc public var artist: Foundation.NSArray?
+  @objc public var iqiyi_media: iOS_DCA_SDK.iqiyiMediaModel?
+  @objc public var vst_media: iOS_DCA_SDK.vstMediaModel?
+  @objc public var iqiyi_score: Swift.String?
+  @objc public var douban_score: Swift.String?
+  @objc public var year: Swift.String?
+  @objc public var director: Foundation.NSArray?
+  @objc public var participator: Foundation.NSArray?
+  @objc public var hot: Swift.String?
+  @objc public var title: Swift.String?
+  @objc public var union_styles: Foundation.NSArray?
+  @objc public var category: Swift.String?
+  @objc public var region: Foundation.NSArray?
+  @objc public var tvId: Swift.String?
+  @objc public var iqiyi_tags: Foundation.NSArray?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class TVBatchListModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var name: Swift.String?
+  @objc public var type: Swift.String?
+  @objc public var data: [iOS_DCA_SDK.TVDetailModel]?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class AdvertisementModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var mode: Swift.Int
+  @objc public var appId: Swift.String?
+  @objc public var adId: Swift.Int
+  @objc public var type: Swift.Int
+  @objc public var content: Swift.String?
+  @objc public var url: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ResAlbumModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var coverUrlLarge: Swift.String?
+  @objc public var trackCount: Swift.Int
+  @objc public var releaseTime: Swift.String?
+  @objc public var artist: Swift.String?
+  @objc public var coverUrlSmall: Swift.String?
+  @objc public var coverUrlMiddle: Swift.String?
+  @objc public var author: Swift.String?
+  @objc public var intro: Swift.String?
+  @objc public var resAlbumId: Swift.String?
+  @objc public var title: Swift.String?
+  @objc public var languageName: Swift.String?
+  @objc public var tags: Swift.String?
+  @objc public var type: Swift.String?
+  @objc public var source: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ResMusicModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var musicId: Swift.String?
+  @objc public var coverUrlLarge: Swift.String?
+  @objc public var artist: Swift.String?
+  @objc public var coverUrlSmall: Swift.String?
+  @objc public var author: Swift.String?
+  @objc public var albumId: Swift.String?
+  @objc public var trackIntro: Swift.String?
+  @objc public var coverUrlMiddle: Swift.String?
+  @objc public var type: Swift.String?
+  @objc public var languageName: Swift.String?
+  @objc public var trackTitle: Swift.String?
+  @objc public var playUrl: Swift.String?
+  @objc public var playSize: Swift.String?
+  @objc public var duration: Swift.Int
+  @objc public var albumTitle: Swift.String?
+  @objc public var trackTags: Swift.String?
+  @objc public var source: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ResNewsCateListModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var name: Swift.String?
+  @objc public var newsId: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ResNewsListModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var newsListId: Swift.String?
+  @objc public var category: Swift.String?
+  @objc public var title: Swift.String?
+  @objc public var image_url: Swift.String?
+  @objc public var audio_url: Swift.String?
+  @objc public var duration: Swift.String?
+  @objc public var source: Swift.String?
+  @objc public var human_time: Swift.String?
+  @objc public var updated_at: Swift.String?
+  @objc public var tags: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ResRadioCateListModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var name: Swift.String?
+  @objc public var radioId: Swift.String?
+  @objc public var icon: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ResRadioListModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var logo: Swift.String?
+  @objc public var play_url: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public var fm: Swift.String?
+  @objc public var program: iOS_DCA_SDK.ResRadioProgramModel?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ResRadioProgramModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var name: Swift.String?
+  @objc public var start_time: Swift.String?
+  @objc public var end_time: Swift.String?
+  @objc public var dj: Swift.String?
+  @objc public var week: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class CourseAlbumRequest : ObjectiveC.NSObject {
+  @objc public var title: Swift.String?
+  @objc public var grade: Swift.String?
+  @objc public var subject: Swift.String?
+  @objc public var version: Swift.String?
+  @objc public var term: Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class LetingCateModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var catalog_id: Swift.String?
+  @objc public var catalog_name: Swift.String?
+  @objc public var user_subscribe: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class GetVideoRequest : ObjectiveC.NSObject {
+  @objc public var catalogId: Swift.String
+  @objc public var uid: Swift.String
+  @objc public var productId: Swift.String
+  @objc public var province: Swift.String
+  @objc public var city: Swift.String
+  @objc public var keyword: Swift.String
+  @objc public var distinct: Swift.Int
+  @objc public var size: Swift.Int
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class SearchVideoRequest : ObjectiveC.NSObject {
+  @objc public var catalogId: Swift.String
+  @objc public var uid: Swift.String
+  @objc public var productId: Swift.String
+  @objc public var province: Swift.String
+  @objc public var city: Swift.String
+  @objc public var keyword: Swift.String
+  @objc public var distinct: Swift.Int
+  @objc public var size: Swift.Int
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class LetingVideoModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var audio: Swift.String?
+  @objc public var catalog_id: Swift.String?
+  @objc public var catalog_name: Swift.String?
+  @objc public var content: Swift.String?
+  @objc public var duration: Swift.Int
+  @objc public var hms: Swift.String?
+  @objc public var hot: Swift.String?
+  @objc public var human_time: Swift.String?
+  @objc public var image: Swift.String?
+  @objc public var pub_time: Swift.String?
+  @objc public var sid: Swift.String?
+  @objc public var source: Swift.String?
+  @objc public var tags: Swift.String?
+  @objc public var title: Swift.String?
+  @objc public var updated_at: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class FBExt : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var district: Swift.String?
+  @objc public var city: Swift.String?
+  @objc public var province: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class FBData : ObjectiveC.NSObject {
+  @objc public var sid: Swift.String
+  @objc public var category: Swift.String
+  @objc public var duration: Swift.Int
+  @objc public var ext: Foundation.NSDictionary
+  @objc override dynamic public init()
+  @objc public func initializ(rExt: iOS_DCA_SDK.FBExt?) -> Foundation.NSDictionary
+  @objc public func getDataDic() -> Foundation.NSDictionary
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class FeedBack : ObjectiveC.NSObject {
+  @objc public var action_type: Swift.String
+  @objc public var timestamp: Swift.String
+  @objc public var imei: Swift.String
+  @objc public var os: Swift.String
+  @objc public var client_ip: Swift.String
+  @objc public var brand: Swift.String
+  @objc public var clarity: Swift.String
+  @objc public var log_id: Swift.String
+  @objc public var data: Foundation.NSArray?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class SmartHomeTokenRequest : ObjectiveC.NSObject {
+  @objc public var skillId: Swift.String?
+  @objc public var skillVersion: Swift.String?
+  @objc public var productId: Swift.String?
+  @objc public var smartHomeAccessToken: Swift.String?
+  @objc public var smartHomeRefreshToken: Swift.String?
+  @objc public var accessTokenExpiresIn: Swift.Int
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class ApplianceAliasSyncModel : ObjectiveC.NSObject {
+  @objc public var skillId: Swift.String?
+  @objc public var skillVersion: Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class ResIdaddyCatesModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc public var name: Swift.String?
+  @objc public var catId: Swift.String?
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class IDaddyAlbumRequest : ObjectiveC.NSObject {
+  @objc public var deviceId: Swift.String
+  @objc public var productId: Swift.String
+  @objc public var categoryId: Swift.String
+  @objc public var offset: Swift.Int
+  @objc public var limit: Swift.Int
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class IDaddyTrackRequest : ObjectiveC.NSObject {
+  @objc public var deviceId: Swift.String
+  @objc public var productId: Swift.String
+  @objc public var albumId: Swift.String
+  @objc public var offset: Swift.Int
+  @objc public var limit: Swift.Int
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class IDaddySearchAlbumRequest : ObjectiveC.NSObject {
+  @objc public var deviceId: Swift.String
+  @objc public var productId: Swift.String
+  @objc public var keyword: Swift.String
+  @objc public var matching: Swift.Int
+  @objc public var offset: Swift.Int
+  @objc public var limit: Swift.Int
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class IDaddySearchTrackRequest : ObjectiveC.NSObject {
+  @objc public var deviceId: Swift.String
+  @objc public var productId: Swift.String
+  @objc public var keyword: Swift.String
+  @objc public var matching: Swift.Int
+  @objc public var offset: Swift.Int
+  @objc public var limit: Swift.Int
+  @objc public var cat_ids: Swift.String
+  @objc public var scoped: Swift.Int
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class SkillDetailRequest : ObjectiveC.NSObject {
+  @objc public var skillId: Swift.String
+  @objc public var skillVersion: Swift.String
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class SkillRequest : ObjectiveC.NSObject {
+  @objc public var skillId: Swift.String
+  @objc public var skillVersion: Swift.String
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class BatchPosRequest : ObjectiveC.NSObject {
+  @objc public var skillId: Swift.String
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class HiFiBaseModel : ObjectiveC.NSObject, Foundation.NSCoding, YYKit.YYModel {
+  @objc override dynamic public init()
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class HiFiMusicDetailModel : iOS_DCA_SDK.HiFiBaseModel {
+  @objc public var introduction: Swift.String?
+  @objc public var companyname: Swift.String?
+  @objc public var productid: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public var publishtime: Swift.String?
+  @objc public var bigimg: Swift.String?
+  @objc public var sliderid: Swift.String?
+  @objc public var size: Swift.String?
+  @objc public var cn_name: Swift.String?
+  @objc public var musiccount: Swift.Int
+  @objc public var smallimg: Swift.String?
+  @objc public var prize: Swift.Int
+  @objc public var reference: Swift.String?
+  @objc public var technology: Swift.String?
+  @objc public var isfullflac: Swift.Int
+  @objc public var musicId: Swift.String?
+  @objc public var language: Swift.String?
+  @objc public var artists: Swift.String?
+  @objc public var disks: [iOS_DCA_SDK.HiFiMusicArrModel]?
+  @objc public var musicListItems: [iOS_DCA_SDK.HiFiMusicModel]?
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class HiFiMusicArrModel : iOS_DCA_SDK.HiFiBaseModel {
+  @objc public var musics: [iOS_DCA_SDK.HiFiMusicModel]?
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class HiFiMusicModel : iOS_DCA_SDK.HiFiBaseModel {
+  @objc public var price: Swift.Int
+  @objc public var productid: Swift.String?
+  @objc public var albumid: Swift.String?
+  @objc public var artistid: Swift.String?
+  @objc public var musicId: Swift.String?
+  @objc public var artist: Swift.String?
+  @objc public var totaltime: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public var trackno: Swift.Int
+  @objc public var albumimg: Swift.String?
+  @objc public var albumname: Swift.String?
+  @objc public var audioFileList: [iOS_DCA_SDK.AudioFileListModel]?
+  @objc public var listenurl: Swift.String?
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class AudioFileListModel : iOS_DCA_SDK.HiFiBaseModel {
+  @objc public var audioCategoryId: Swift.Int
+  @objc public var musicUrl: Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class HiFiMenusModel : iOS_DCA_SDK.HiFiBaseModel {
+  @objc public var tagid: Swift.Int
+  @objc public var sliderid: Swift.String?
+  @objc public var menuid: Swift.String?
+  @objc public var displayorder: Swift.Int
+  @objc public var hasmore: Swift.Int
+  @objc public var pattern: Swift.String?
+  @objc public var isnew: Swift.Int
+  @objc public var menutype: Swift.String?
+  @objc public var menuname: Swift.String?
+  @objc public var moretype: Swift.String?
+  @objc public var sliderContent: [iOS_DCA_SDK.HiFiSliderContentModel]?
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class HiFiSliderContentModel : iOS_DCA_SDK.HiFiBaseModel {
+  @objc public var type: Swift.String?
+  @objc public var contentTitle: Swift.String?
+  @objc public var albumName: Swift.String?
+  @objc public var ImgUrl: Swift.String?
+  @objc public var displayOrder: Swift.Int
+  @objc public var artistName: Swift.String?
+  @objc public var linkUrl: Swift.String?
+  @objc public var contentId: Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class HiFiAlbumModel : iOS_DCA_SDK.HiFiBaseModel {
+  @objc public var cn_name: Swift.String?
+  @objc public var smallimg: Swift.String?
+  @objc public var albumId: Swift.String?
+  @objc public var artist: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public var recordingTime: Swift.String?
+  @objc public var musicListId: Swift.String?
+  @objc public var introduce: Swift.String?
+  @objc public var smallImg: Swift.String?
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class HiFiMenuAlbumModel : iOS_DCA_SDK.HiFiBaseModel {
+  @objc public var imgurl: Swift.String?
+  @objc public var artistname: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public var albumId: Swift.String?
+  @objc public var cn_name: Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class HiFiHotListModel : iOS_DCA_SDK.HiFiBaseModel {
+  @objc public var bigimg: Swift.String?
+  @objc public var smallimg: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public var trackstotal: Swift.Int
+  @objc public var packId: Swift.String?
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class HiFiMenuTypeModel : iOS_DCA_SDK.HiFiBaseModel {
+  @objc public var menuid: Swift.String?
+  @objc public var menuname: Swift.String?
+  @objc public var image: Swift.String?
+  @objc public var menuContent: [iOS_DCA_SDK.HiFiMenuTypeContentModel]?
+  @objc public static func modelContainerPropertyGenericClass() -> [Swift.String : Any]?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class HiFiMenuTypeContentModel : iOS_DCA_SDK.HiFiBaseModel {
+  @objc public var imgurl: Swift.String?
+  @objc public var artistname: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public var albumId: Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class ArtistGroupListModel : iOS_DCA_SDK.HiFiBaseModel {
+  @objc public var image: Swift.String?
+  @objc public var groupId: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class ArtistGroupDetailModel : iOS_DCA_SDK.HiFiBaseModel {
+  @objc public var smallimg: Swift.String?
+  @objc public var artistId: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public static func modelCustomPropertyMapper() -> [Swift.String : Any]?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class HiFiSearchContentModel : iOS_DCA_SDK.HiFiBaseModel {
+  @objc public var Imgurl: Swift.String?
+  @objc public var albumname: Swift.String?
+  @objc public var artistname: Swift.String?
+  @objc public var contentid: Swift.String?
+  @objc public var name: Swift.String?
+  @objc public var type: Swift.Int
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class DCASmartHomeManager : ObjectiveC.NSObject {
+  @objc public func querySmartHomeSkill(callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc public func querySmartHomeAccountStatus(skillId: Swift.String, skillVersion: Swift.String, productId: Swift.String, callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc public func querySmartHomeAppliance(skillId: Swift.String, skillVersion: Swift.String, productId: Swift.String, group: Swift.String, callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc public func queryAllSmartHomeAppliance(productId: Swift.String, callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc public func queryAppliancePosition(applianceId: Swift.String, skillId: Swift.String, callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc public func updateApplianceCustomPosition(applianceId: Swift.String, skillId: Swift.String, productId: Swift.String, position: Swift.String, group: Swift.String, callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc public func updateApplianceAlias(applianceId: Swift.String, skillId: Swift.String, productId: Swift.String, alias: Swift.String, group: Swift.String, callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc public func applianceAliasSync(productId: Swift.String, group: Swift.String, iotSkillId: Swift.String, skillList: [iOS_DCA_SDK.ApplianceAliasSyncModel]?, callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc public func updateSmartHomeTokenInfo(smartHomeTokenRequest: iOS_DCA_SDK.SmartHomeTokenRequest, callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc public func bindSmartHomeAccount(url: Swift.String, productId: Swift.String, skillVersion: Swift.String, callBack: @escaping (Swift.Bool) -> ())
+  @objc public func unbindSmartHomeAccount(skillId: Swift.String, callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc public func getSmartHomeDetail(skillId: Swift.String, callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc public func getSupportDevice(skillId: Swift.String, page: Swift.Int, pageSize: Swift.Int, callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc public func batchQuerySmartHomeAccountStatus(productId: Swift.String, list: [iOS_DCA_SDK.SkillRequest], callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc public func batchQueryAppliancePosition(productId: Swift.String, list: [iOS_DCA_SDK.BatchPosRequest], callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class DCADeviceManager : ObjectiveC.NSObject {
+  @objc public var codeVerifier: Swift.String
+  @objc public func requestAuthCode(redirectUrl: Swift.String, clientId: Swift.String, isScan: Swift.Bool, callBack: @escaping ((Swift.String, Swift.String) -> ()))
+  @objc public func bindDevice(deviceData: Foundation.NSDictionary?, callBack: @escaping (Foundation.NSDictionary?) -> ())
+  @objc public func unbindDevice(callBack: @escaping ((Foundation.NSDictionary?) -> ()))
+  @objc public func getBindDeviceList(callBack: @escaping ((Foundation.NSDictionary?) -> ()))
+  @objc public func getDialogRecord(productId: Swift.String, seqId: Swift.String?, count: Swift.Int, callBack: @escaping ((Foundation.NSDictionary?) -> ()))
+  @objc public func sendAuthCode(deviceId: Swift.String, authCode: Swift.String, isScan: Swift.Bool, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func getQueryDeviceStatus(uid: Swift.String, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func getDeviceCurrentState(callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func getDeviceBasicInfo(callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.EquipDeviceInfoModel?) -> ()))
+  @objc public func getAlarmList(callBack: @escaping ((Swift.String, Swift.String, [iOS_DCA_SDK.EquipAlarmModel]?) -> ()))
+  @objc public func addAlarm(alarmDate: Swift.String, alarmTime: Swift.String, repeatStr: Swift.String, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func deleteAlarm(alarmIds: Foundation.NSArray, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func getRemindList(callBack: @escaping ((Swift.String, Swift.String, [iOS_DCA_SDK.EquipRemindModel]?) -> ()))
+  @objc public func addRemind(remindDate: Swift.String, remindTime: Swift.String, event: Swift.String, repeatStr: Swift.String, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func deleteRemind(remindIds: Foundation.NSArray, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func setBleActivated(model: Swift.Bool, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func setWakeUpFunction(state: Swift.Int, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func getchatAndMsgUnReadCount(callBack: @escaping ((Swift.String, Swift.String, Swift.Int, Swift.Int) -> ()))
+  @objc public func getMessages(page: Swift.Int, count: Swift.Int, callBack: @escaping ((Swift.String, Swift.String, Swift.Int, [iOS_DCA_SDK.EquipVoiceMessageModel]?) -> ()))
+  @objc public func sendVoiceMessage(data: Foundation.NSData, callBack: @escaping ((Swift.String, Swift.String) -> ()))
+  @objc public func getUnReadMessageCount(callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func readVoiceMessage(chatId: Swift.String, callBack: @escaping ((Swift.String, Swift.String) -> ()))
+  @objc public func addCallRecord(srcId: Swift.String, targetId: Swift.String, state: Swift.Int, talkTime: Swift.String, type: Swift.String, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func getCallRecordList(accId: Swift.String, page: Swift.Int, count: Swift.Int, callBack: @escaping ((Swift.String, Swift.String, [iOS_DCA_SDK.EquCallRecordListModel]?) -> ()))
+  @objc public func getGroupChats(callBack: @escaping ((Swift.String, Swift.String, [iOS_DCA_SDK.FamilyGroupChatListModel]?) -> ()))
+  @objc public func createGroupChat(groupName: Swift.String, userIds: Foundation.NSArray, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func getGroupChatMessages(chatId: Swift.String, page: Swift.Int, count: Swift.Int, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSArray, [iOS_DCA_SDK.FGCDetailListModel]?) -> ()))
+  @objc public func sendGroupChatMessage(chatId: Swift.String, data: Foundation.NSData, callBack: @escaping ((Swift.String, Swift.String) -> ()))
+  @objc public func readGroupChatMessage(chatId: Swift.String, recordId: Swift.String, callBack: @escaping ((Swift.String, Swift.String) -> ()))
+  @objc public func addScene(productId: Swift.String, quickCreateRequest: iOS_DCA_SDK.QuickCreateRequest, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func deleteScene(productId: Swift.String, sceneId: Swift.String, callBack: @escaping ((Swift.String, Swift.String) -> ()))
+  @objc public func updateScene(productId: Swift.String, sceneId: Swift.String, quickCreateRequest: iOS_DCA_SDK.QuickCreateRequest, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func getScene(productId: Swift.String, callBack: @escaping ((Swift.String, [iOS_DCA_SDK.InstructionModel]?) -> ()))
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum GENDER : Swift.Int {
+  case MALE = 1
+  case FAMALE = 2
+  case UNKNOWN = 3
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class DCAUserManager : ObjectiveC.NSObject {
+  @objc public func getUserInfo(userId: Swift.String, callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.UserInfoModel?) -> ()))
+  @objc public func registerFirst(nickname: Swift.String, phone: Swift.String, gender: iOS_DCA_SDK.GENDER, headUrl: Swift.String, callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.UserInfoModel?) -> ()))
+  @objc public func setHeadImg(data: Foundation.Data, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func setNickname(nickname: Swift.String, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func setGender(gender: iOS_DCA_SDK.GENDER, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func getBabyData(callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.BabyDataModel?) -> ()))
+  @objc public func saveBabyData(born: Swift.String, relation: Swift.String, gender: iOS_DCA_SDK.GENDER, babyInfoId: Swift.String, callBack: @escaping ((Swift.String, Swift.String) -> ()))
+  @objc public func addModelInCollection(model: iOS_DCA_SDK.ChildAlbumBrowseModel, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func deleteModelInCollection(model: iOS_DCA_SDK.ChildAlbumBrowseModel, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func getCollectionList(page: Swift.Int, count: Swift.Int, callBack: @escaping ((Swift.String, Swift.String, Swift.Int, [iOS_DCA_SDK.ChildAlbumBrowseModel]?) -> ()))
+  @objc public func getContacts(callBack: @escaping ((Swift.String, Swift.String, Swift.Int, [iOS_DCA_SDK.FamilyAddressBookListModel]?) -> ()))
+  @objc public func addContact(nickname: Swift.String, relation: Swift.String, phone: Swift.String, callBack: @escaping ((Swift.String, Swift.String) -> ()))
+  @objc public func getUserQRCode(callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func addQRContact(nickname: Swift.String, relation: Swift.String, userId: Swift.String, callBack: @escaping ((Swift.String, Swift.String) -> ()))
+  @objc public func getNewFriends(callBack: @escaping ((Swift.String, Swift.String, [iOS_DCA_SDK.FamilyAddressBookListModel]?) -> ()))
+  @objc public func agreeContactRequest(model: iOS_DCA_SDK.FamilyAddressBookListModel, callBack: @escaping ((Swift.String, Swift.String) -> ()))
+  @objc public func editContact(nickname: Swift.String, relation: Swift.String, editId: Swift.String, fbId: Swift.String, callBack: @escaping ((Swift.String, Swift.String) -> ()))
+  @objc public func deleteContact(fbId: Swift.String, callBack: @escaping ((Swift.String, Swift.String) -> ()))
+  @objc public func getFriendDeviceList(userID: Swift.String, callBack: @escaping ((Swift.String, Swift.String, [iOS_DCA_SDK.EquipDeviceListModel]?) -> ()))
+  @objc public func initQa(callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.QaInitModel?) -> ()))
+  @objc public func queryQaInfo(qaInitModel: iOS_DCA_SDK.QaInitModel, callBack: @escaping ((Swift.String, Swift.String, [iOS_DCA_SDK.QaInfoModel]?) -> ()))
+  @objc public func queryQaInfoDetail(kid: Swift.String, callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.QaInfoModel?) -> ()))
+  @objc public func addQaInfo(qaInitModel: iOS_DCA_SDK.QaInitModel, questionNameArr: Foundation.NSArray, answerNameArr: Foundation.NSArray, callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.QaInfoModel?) -> ()))
+  @objc public func deleteQaInfo(kid: Swift.String, callBack: @escaping ((Swift.String, Swift.String) -> ()))
+  @objc public func updateQaInfo(qaInfoModel: iOS_DCA_SDK.QaInfoModel, callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.QaInfoModel?) -> ()))
+  @objc public func effectiveQaOperation(qaInitModel: iOS_DCA_SDK.QaInitModel, callBack: @escaping ((Swift.String, Swift.String) -> ()))
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum SMSCODETYPE : Swift.Int {
+  case LOGIN = 1
+  case FORGETPW = 2
+  case BINDINGPHONE = 4
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class DCAAccountManager : ObjectiveC.NSObject {
+  @objc public func getUserId() -> Swift.String
+  @objc public func getAccessToken() -> Swift.String
+  @objc public func loginOut()
+  @objc public func loginByWeChat(request: iOS_DCA_SDK.WeChatLoginRequest, callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.AccountModel?) -> ()))
+  @objc public func linkPhoneNum(request: iOS_DCA_SDK.LinkPhoneRequest, callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.AccountModel?) -> ()))
+  @objc public func getVerifyCode(requestModel: iOS_DCA_SDK.GetCodeRequestModel, callBack: @escaping ((Swift.String, Swift.String) -> ()))
+  @objc public func login(request: iOS_DCA_SDK.LoginRequest, callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.AccountModel?) -> ()))
+  @objc public func verifyUserNameBySmsCode(request: iOS_DCA_SDK.VerifyRequest, callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.AccountModel?) -> ()))
+  @objc public func initPassword(request: iOS_DCA_SDK.InitPasswordRequest, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func setPassword(request: iOS_DCA_SDK.SetPasswordRequest, callBack: @escaping ((Swift.String, Swift.String, Foundation.NSDictionary?) -> ()))
+  @objc public func linkAcount(thirdPlatformUid: Swift.String, thirdPlatformToken: Swift.String, manufactureSecret: Swift.String, callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.AccountModel?) -> ()))
+  @objc public func refreshToken(callBack: @escaping ((Swift.Bool) -> ()))
+  @objc public func getWeChatAuthData(wxAppId: Swift.String, wxAppSecret: Swift.String, code: Swift.String, callBack: @escaping ((Foundation.NSDictionary?, Foundation.NSError?) -> ()))
+  @objc public func getWeChatLoginUserInfo(accessToken: Swift.String, openId: Swift.String, callBack: @escaping ((Foundation.NSDictionary?, Foundation.NSError?) -> ()))
+  @objc public func phoneQuickLogin(request: iOS_DCA_SDK.QuickLoginRequest, callBack: @escaping ((Swift.String, Swift.String, iOS_DCA_SDK.AccountModel?) -> ()))
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension iOS_DCA_SDK.DCASDKEBTYPE : Swift.Equatable {}
+extension iOS_DCA_SDK.DCASDKEBTYPE : Swift.Hashable {}
+extension iOS_DCA_SDK.DCASDKEBTYPE : Swift.RawRepresentable {}
+extension iOS_DCA_SDK.ResCommType : Swift.Equatable {}
+extension iOS_DCA_SDK.ResCommType : Swift.Hashable {}
+extension iOS_DCA_SDK.ResCommType : Swift.RawRepresentable {}
+extension iOS_DCA_SDK.HiFiSearchType : Swift.Equatable {}
+extension iOS_DCA_SDK.HiFiSearchType : Swift.Hashable {}
+extension iOS_DCA_SDK.HiFiSearchType : Swift.RawRepresentable {}
+extension iOS_DCA_SDK.SearchType : Swift.Equatable {}
+extension iOS_DCA_SDK.SearchType : Swift.Hashable {}
+extension iOS_DCA_SDK.SearchType : Swift.RawRepresentable {}
+extension iOS_DCA_SDK.ConnectStatus : Swift.Equatable {}
+extension iOS_DCA_SDK.ConnectStatus : Swift.Hashable {}
+extension iOS_DCA_SDK.ConnectStatus : Swift.RawRepresentable {}
+extension iOS_DCA_SDK.PlayStatus : Swift.Equatable {}
+extension iOS_DCA_SDK.PlayStatus : Swift.Hashable {}
+extension iOS_DCA_SDK.PlayStatus : Swift.RawRepresentable {}
+extension iOS_DCA_SDK.BleNetworkState : Swift.Equatable {}
+extension iOS_DCA_SDK.BleNetworkState : Swift.Hashable {}
+extension iOS_DCA_SDK.BleNetworkState : Swift.RawRepresentable {}
+extension iOS_DCA_SDK.ReceiveState : Swift.Equatable {}
+extension iOS_DCA_SDK.ReceiveState : Swift.Hashable {}
+extension iOS_DCA_SDK.ReceiveState : Swift.RawRepresentable {}
+extension iOS_DCA_SDK.BluetoothState : Swift.Equatable {}
+extension iOS_DCA_SDK.BluetoothState : Swift.Hashable {}
+extension iOS_DCA_SDK.BluetoothState : Swift.RawRepresentable {}
+extension iOS_DCA_SDK.EvnType : Swift.Equatable {}
+extension iOS_DCA_SDK.EvnType : Swift.Hashable {}
+extension iOS_DCA_SDK.EvnType : Swift.RawRepresentable {}
+extension iOS_DCA_SDK.SonicNetworkState : Swift.Equatable {}
+extension iOS_DCA_SDK.SonicNetworkState : Swift.Hashable {}
+extension iOS_DCA_SDK.SonicNetworkState : Swift.RawRepresentable {}
+extension iOS_DCA_SDK.APNetworkState : Swift.Equatable {}
+extension iOS_DCA_SDK.APNetworkState : Swift.Hashable {}
+extension iOS_DCA_SDK.APNetworkState : Swift.RawRepresentable {}
+extension iOS_DCA_SDK.GENDER : Swift.Equatable {}
+extension iOS_DCA_SDK.GENDER : Swift.Hashable {}
+extension iOS_DCA_SDK.GENDER : Swift.RawRepresentable {}
+extension iOS_DCA_SDK.SMSCODETYPE : Swift.Equatable {}
+extension iOS_DCA_SDK.SMSCODETYPE : Swift.Hashable {}
+extension iOS_DCA_SDK.SMSCODETYPE : Swift.RawRepresentable {}

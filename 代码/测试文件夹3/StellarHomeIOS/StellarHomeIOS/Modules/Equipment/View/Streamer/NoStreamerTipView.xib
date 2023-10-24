@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NoStreamerTipView" customModule="stellarHomeDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="486"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_streamer_none" translatesAutoresizingMaskIntoConstraints="NO" id="TiL-Jw-RrP">
+                    <rect key="frame" x="102" y="89" width="210" height="138"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您还没有创建流光" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eO2-v5-dos">
+                    <rect key="frame" x="133.5" y="251" width="147" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击右下角“+”创建个喜欢的流光吧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgJ-iK-VFX">
+                    <rect key="frame" x="96" y="280" width="222.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.66198736429214478" green="0.65871769189834595" blue="0.68407505750656128" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="GgJ-iK-VFX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Bgk-EZ-uIr"/>
+                <constraint firstItem="GgJ-iK-VFX" firstAttribute="top" secondItem="eO2-v5-dos" secondAttribute="bottom" constant="8" id="DUJ-jm-ElC"/>
+                <constraint firstItem="eO2-v5-dos" firstAttribute="top" secondItem="TiL-Jw-RrP" secondAttribute="bottom" constant="24" id="Q2t-Bt-934"/>
+                <constraint firstItem="TiL-Jw-RrP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="89" id="fVY-QJ-ilm"/>
+                <constraint firstItem="TiL-Jw-RrP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wSN-2W-Grm"/>
+                <constraint firstItem="eO2-v5-dos" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yZz-RH-jJy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="68" y="-133"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_streamer_none" width="210" height="138"/>
+    </resources>
+</document>

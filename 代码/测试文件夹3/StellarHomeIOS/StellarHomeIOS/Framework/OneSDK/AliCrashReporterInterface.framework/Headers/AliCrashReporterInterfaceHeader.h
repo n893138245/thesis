@@ -1,0 +1,4 @@
+#ifndef AliCrashReporterInterfaceHeader_h
+#define AliCrashReporterInterfaceHeader_h
+#import <AliCrashReporterInterface/AliCrashReporterInterface.h>
+#endif 

@@ -1,0 +1,165 @@
+import UIKit
+class AddWiFiOrResetLightViewController: AddDeviceBaseViewController {
+    var isAddWifiDevice = false
+    var deviceToken: String = ""
+    var detailModel: AddDeviceDetailModel?
+    var lightModel: LightModel?
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+        setupRx()
+    }
+    private func setupUI() {
+        navBar.titleLabel.text = StellarLocalizedString("ALERT_ADD_WIFI_FULL_COLOR")
+        navBar.titleLabel.font = STELLAR_FONT_MEDIUM_T18
+        navBar.titleLabel.textColor = STELLAR_COLOR_C3
+        navBar.exitButton.isHidden = true
+        cardView.snp.remakeConstraints { (make) in
+            make.left.equalToSuperview().offset(9.fit)
+            make.right.equalToSuperview().offset(-9.fit)
+            make.top.equalTo(navBar.snp.bottom).offset(10.fit)
+            make.bottom.equalToSuperview().offset(-kBottomArcH - 64.fit)
+        }
+        view.addSubview(needHelpBtn)
+        needHelpBtn.snp.makeConstraints { (make) in
+            make.size.equalTo(CGSize(width: 80, height: 30))
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-kBottomArcH - 20.fit)
+        }
+        let stepFirstLabel = StepLabel(frame: CGRect(x: 17.fit, y: 40.fit, width: 23.fit, height: 23.fit), step: 1, font: UIFont(name: "DINPro-Medium", size: 16)!)
+        cardView.addSubview(stepFirstLabel)
+        let stepFirstTitleLabel = UILabel(frame: CGRect(x: 52.fit, y: 41.fit, width: cardView.bounds.width - 52.fit - 30.fit, height: 22.fit))
+        stepFirstTitleLabel.text = StellarLocalizedString("ADD_DEVICE_POWER_ON_EQUIPMENT")
+        stepFirstTitleLabel.textColor = STELLAR_COLOR_C4
+        stepFirstTitleLabel.font = STELLAR_FONT_MEDIUM_T18
+        cardView.addSubview(stepFirstTitleLabel)
+        let stepSecondLabel = StepLabel(frame: CGRect(x: 17.fit, y: 95.fit, width: 23.fit, height: 23.fit), step: 2, font: UIFont(name: "DINPro-Medium", size: 16)!)
+        cardView.addSubview(stepSecondLabel)
+        let stepSecondTitleLabel = UILabel(frame: CGRect(x: 52.fit, y: 95.fit, width: cardView.bounds.width - 52.fit - 30.fit, height: 22.fit))
+        stepSecondTitleLabel.text = detailModel?.appShownType == "台灯" ? "长按电源或配网键5秒":StellarLocalizedString("ADD_DEVICE_QUICK_SWITCH")
+        stepSecondTitleLabel.textColor = STELLAR_COLOR_C4
+        stepSecondTitleLabel.font = STELLAR_FONT_MEDIUM_T18
+        cardView.addSubview(stepSecondTitleLabel)
+        let firstDescLabel = UILabel(frame: CGRect(x: 52.fit, y: 120.fit, width: cardView.bounds.width - 52.fit - 30.fit, height: 22.fit))
+        firstDescLabel.text = detailModel?.appShownType == "台灯" ? "当看到Wi-Fi指示灯开始闪烁，开始配网" : StellarLocalizedString("ADD_DEVICE_INTERVAL_SECOND")
+        firstDescLabel.textColor = STELLAR_COLOR_C6
+        firstDescLabel.font = STELLAR_FONT_T12
+        cardView.addSubview(firstDescLabel)
+        let secondDesc = detailModel?.appShownType == "台灯" ? "":StellarLocalizedString("ALERT_LIGHT_RESET_SUCCESS_PERFORMANCE")
+        let secondDescLabelW = cardView.bounds.width - 52.fit - 30.fit
+        let secondDescLabelH = NSString(string: secondDesc).boundingRect(with: CGSize(width: secondDescLabelW, height: CGFloat(MAXFLOAT)), options: [.usesFontLeading, .usesLineFragmentOrigin], attributes: [NSAttributedString.Key.font: STELLAR_FONT_T13 as Any], context: nil).size.height
+        let secondDescLabel = UILabel(frame: CGRect(x: 52.fit, y: 148.fit, width: secondDescLabelW, height: secondDescLabelH))
+        secondDescLabel.numberOfLines = 0
+        secondDescLabel.text = secondDesc
+        secondDescLabel.textColor = STELLAR_COLOR_C5
+        secondDescLabel.font = STELLAR_FONT_T13
+        cardView.addSubview(secondDescLabel)
+        cardView.addSubview(confirmBtn)
+        confirmBtn.snp.makeConstraints { (make) in
+            make.size.equalTo(CGSize(width: cardView.bounds.width - 2*33.fit, height: 46.fit))
+            make.left.equalToSuperview().offset(33.fit)
+            make.bottom.equalToSuperview().offset(-40.fit)
+        }
+        if detailModel?.appShownType == "台灯" {
+            let deviceImgView = UIImageView(image: UIImage(named: "taideng"))
+            cardView.addSubview(deviceImgView)
+            deviceImgView.snp.makeConstraints {
+                $0.centerX.equalTo(cardView)
+                $0.top.equalTo(cardView).offset(180.fit)
+            }
+            confirmBtn.setTitle("确定指示灯为闪烁状态", for: .normal)
+            setImageURL(imageView: deviceImgView)
+        }else {
+            let deviceImgView = UIImageView(image: UIImage(named: "wifi_rgbw"))
+            deviceImgView.frame = CGRect(x: 52.fit, y: 243.fit, width: 107.fit, height: 107.fit)
+            deviceImgView.contentMode = .scaleAspectFit
+            cardView.addSubview(deviceImgView)
+            setImageURL(imageView: deviceImgView)
+            let helpSwitchImgView = UIImageView(image: UIImage(named: "add_help_switch"))
+            helpSwitchImgView.frame = CGRect(x: 172.fit, y: 235.fit, width: 125.fit, height: 125.fit)
+            helpSwitchImgView.contentMode = .scaleAspectFit
+            cardView.addSubview(helpSwitchImgView)
+            let switchFrequencyView = UILabel(frame: CGRect(x: 288.fit, y: 327.fit, width: 25.fit, height: 25.fit))
+            switchFrequencyView.layer.cornerRadius = switchFrequencyView.bounds.width*0.5
+            switchFrequencyView.layer.borderWidth = 1
+            switchFrequencyView.layer.borderColor = STELLAR_COLOR_C7.cgColor
+            switchFrequencyView.text = "5"
+            switchFrequencyView.textColor = STELLAR_COLOR_C1
+            switchFrequencyView.font = UIFont(name: "DINPro-Medium", size: 18.fit)
+            switchFrequencyView.textAlignment = .center
+            cardView.addSubview(switchFrequencyView)
+        }
+        if !isAddWifiDevice {
+            confirmBtn.isHidden = true
+            needHelpBtn.isHidden = true
+            lineImage.isHidden = true
+            navBar.titleLabel.text = StellarLocalizedString("ADD_DEVICE_GATEWAY_GUIDE_HELP_TITLE")
+        }else {
+            navBar.titleLabel.text = "添加\(detailModel?.name ?? "WiFi灯")"
+        }
+    }
+    private func setImageURL(imageView: UIImageView) {
+        if lightModel == nil {
+            guard let fwType = detailModel?.fwType else { return }
+            let url = getDeviceLargeIconBy(fwType: fwType)
+            imageView.kf.setImage(with: URL(string: url))
+        }else {
+            guard let type = lightModel?.fwType else { return }
+            let url = getDeviceLargeIconBy(fwType: type)
+            imageView.kf.setImage(with: URL(string: url))
+        }
+    }
+    private func setupRx() {
+        navBar.backButton.rx.tap
+            .subscribe(onNext:{ [weak self] in
+                self?.navigationController?.popViewController(animated: true)
+            }).disposed(by: disposeBag)
+        confirmBtn.rx.tap
+            .subscribe(onNext:{ [weak self] in
+                let vc = InputWiFiInfoViewController()
+                vc.isAddWifiDevice = true
+                vc.deviceToken = self?.deviceToken ?? ""
+                vc.deviceDetailModel = self?.detailModel ?? AddDeviceDetailModel()
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }).disposed(by: disposeBag)
+        needHelpBtn.rx.tap
+            .subscribe(onNext:{ (_) in
+                jumpTo(url: StellarHomeResourceUrl.sansi_io + "how_to_use_app/add_wifi_bulbs/")
+            }).disposed(by: disposeBag)
+    }
+    lazy var needHelpBtn: UIButton = {
+        let btn = UIButton(type: UIButton.ButtonType.custom)
+        btn.frame = CGRect.zero
+        btn.setTitle(StellarLocalizedString("EQUIPMENT_NEED_HELP"), for: .normal)
+        btn.setTitleColor(STELLAR_COLOR_C3.withAlphaComponent(0.6), for: .normal)
+        btn.titleLabel?.font = STELLAR_FONT_T13
+        return btn
+    }()
+    lazy var confirmBtn: UIButton = {
+        let btn = UIButton(frame: CGRect(x: 33.fit, y: cardView.bounds.height - 40.fit - 46.fit, width: cardView.bounds.width - 2*33.fit, height: 46.fit))
+        btn.setTitle(StellarLocalizedString("ADD_DEVICE_WHITE_LIGHT_STATE"), for: .normal)
+        btn.setTitleColor(STELLAR_COLOR_C1, for: .normal)
+        btn.titleLabel?.font = STELLAR_FONT_T17
+        btn.layer.cornerRadius = btn.bounds.height*0.5
+        btn.layer.borderWidth = 1
+        btn.layer.borderColor = STELLAR_COLOR_C7.cgColor
+        return btn
+    }()
+}
+private class StepLabel: UILabel {
+    private override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    convenience init(frame: CGRect, step: Int, font: UIFont) {
+        self.init(frame: frame)
+        layer.cornerRadius = bounds.width*0.5
+        layer.masksToBounds = true
+        text = "\(step)"
+        textAlignment = .center
+        backgroundColor = STELLAR_COLOR_C8
+        self.font = font
+    }
+}

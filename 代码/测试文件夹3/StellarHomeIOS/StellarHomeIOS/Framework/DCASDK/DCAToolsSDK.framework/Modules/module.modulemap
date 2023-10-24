@@ -1,0 +1,6 @@
+framework module DCAToolsSDK {
+  umbrella header "DCAToolsSDK.h"
+
+  export *
+  module * { export * }
+}

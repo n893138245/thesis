@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddingDeviceView" customModule="StellarHomeIOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="544" height="396"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuh-rw-9p4">
+                    <rect key="frame" x="13" y="173" width="50" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lamp_icon" translatesAutoresizingMaskIntoConstraints="NO" id="75e-9T-Cy2">
+                            <rect key="frame" x="4" y="4" width="42" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="42" id="UIX-6i-hJI"/>
+                                <constraint firstAttribute="height" constant="42" id="mOQ-Ta-fXB"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96897298099999996" green="0.98065489530000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="3AF-PV-2Im"/>
+                        <constraint firstItem="75e-9T-Cy2" firstAttribute="centerY" secondItem="cuh-rw-9p4" secondAttribute="centerY" id="IYB-f5-rhm"/>
+                        <constraint firstAttribute="width" constant="50" id="XI3-de-HOQ"/>
+                        <constraint firstItem="75e-9T-Cy2" firstAttribute="centerX" secondItem="cuh-rw-9p4" secondAttribute="centerX" id="byV-NZ-ye3"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HoO-h0-JYg">
+                    <rect key="frame" x="76" y="177" width="400" height="42"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJM-IJ-pu1">
+                            <rect key="frame" x="0.0" y="0.0" width="400" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQr-MD-jyI">
+                            <rect key="frame" x="0.0" y="21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="qJM-IJ-pu1" firstAttribute="leading" secondItem="HoO-h0-JYg" secondAttribute="leading" id="39k-Vd-17h"/>
+                        <constraint firstItem="gQr-MD-jyI" firstAttribute="top" secondItem="qJM-IJ-pu1" secondAttribute="bottom" id="6PI-t8-xPE"/>
+                        <constraint firstAttribute="trailing" secondItem="qJM-IJ-pu1" secondAttribute="trailing" id="EDc-dZ-MW3"/>
+                        <constraint firstAttribute="bottom" secondItem="gQr-MD-jyI" secondAttribute="bottom" id="Fnn-T2-x2t"/>
+                        <constraint firstItem="qJM-IJ-pu1" firstAttribute="top" secondItem="HoO-h0-JYg" secondAttribute="top" id="Ru2-nK-Dg0"/>
+                        <constraint firstItem="gQr-MD-jyI" firstAttribute="leading" secondItem="HoO-h0-JYg" secondAttribute="leading" id="nkU-fw-azv"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eB7-UR-rdK">
+                    <rect key="frame" x="489" y="180" width="36" height="36"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="Nex-0M-2Yl"/>
+                        <constraint firstAttribute="height" constant="36" id="w7E-Gy-GTc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="HoO-h0-JYg" firstAttribute="leading" secondItem="cuh-rw-9p4" secondAttribute="trailing" constant="13" id="84i-Pd-ifD"/>
+                <constraint firstItem="eB7-UR-rdK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="aCc-7E-Qdm"/>
+                <constraint firstItem="cuh-rw-9p4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="brp-Vx-gr1"/>
+                <constraint firstItem="eB7-UR-rdK" firstAttribute="leading" secondItem="HoO-h0-JYg" secondAttribute="trailing" constant="13" id="pFc-0n-Alx"/>
+                <constraint firstItem="HoO-h0-JYg" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qZ4-cq-ajt"/>
+                <constraint firstAttribute="trailing" secondItem="eB7-UR-rdK" secondAttribute="trailing" constant="19" id="s1T-eb-Ruv"/>
+                <constraint firstItem="cuh-rw-9p4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="13" id="te8-tU-z6q"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="icon" destination="75e-9T-Cy2" id="V5O-KH-F5o"/>
+                <outlet property="nameLabel" destination="qJM-IJ-pu1" id="3Kl-VI-2IF"/>
+                <outlet property="showAnimationView" destination="eB7-UR-rdK" id="gDl-Ko-k6u"/>
+                <outlet property="stateLabel" destination="gQr-MD-jyI" id="0GB-UX-4Sj"/>
+            </connections>
+            <point key="canvasLocation" x="223.18840579710147" y="-114.50892857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="lamp_icon" width="140" height="140"/>
+    </resources>
+</document>

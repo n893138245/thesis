@@ -1,0 +1,110 @@
+use_frameworks!
+platform :ios, '12.0'
+source 'https://cdn.cocoapods.org/'
+#source "https://github.com/aliyun/aliyun-specs.git"
+#source 'https://github.com/CocoaPods/Specs.git'
+inhibit_all_warnings!
+target 'StellarHomeIOS'
+target 'StellarHomeIOS Beta'
+target 'StellarHomeIOSTests'
+target 'StellarHomeIOSUITests'
+
+#sibichi_need
+pod 'YYKit', '~> 1.0.9'
+pod 'CocoaAsyncSocket'
+pod 'CocoaLumberjack'
+#sibichi_DCA_API_SDK_need
+pod 'Alamofire', '~> 4.8'
+pod 'SwiftyJSON', '~> 4.0'
+
+## add the Firebase pod for Google Analytics
+#pod 'Firebase/Analytics'
+#pod 'Firebase/Performance'
+#pod 'Firebase/Crashlytics'
+
+#pod 'AlicloudCrash' , '~> 1.2.0'
+#pod 'AlicloudAPM', '1.1.1'
+
+#private_project_need
+pod 'SnapKit'
+pod 'SwiftRichString', '~> 3.5.1'
+pod 'ReactiveCocoa'
+pod 'RxSwift'
+pod 'RxCocoa'
+pod 'NSHash'
+pod 'MBProgressHUD'
+pod 'IQKeyboardManagerSwift'
+pod 'LTMorphingLabel' , '~> 0.8.1'
+pod 'pop'
+pod 'CocoaMQTT'
+pod 'FDFullscreenPopGesture', '1.1'
+pod 'MJRefresh', '~> 3.2.3'
+pod 'RxDataSources', '~> 4.0'
+pod 'NVActivityIndicatorView'
+pod 'SwipeCellKit'
+pod 'AWSMobileClient'
+pod 'AWSS3'
+pod 'AWSCognito'
+pod 'TZImagePickerController'
+pod 'Kingfisher','~> 5.14.0'
+pod 'CountryPickerView'
+pod 'libPhoneNumber-iOS'
+pod 'CryptoSwift', '~> 1.0'
+pod 'KakaJSON', '~> 1.1.2'
+pod 'FSCalendar'
+#pod 'FBSDKLoginKit'
+#pod 'mob_sharesdk'
+pod 'Moya'
+
+#pod 'mob_sharesdk/ShareSDKPlatforms/WeChat'
+#pod 'mob_sharesdk/ShareSDKPlatforms/Twitter'
+#pod 'mob_sharesdk/ShareSDKPlatforms/Facebook'
+#pod 'mob_sharesdk/ShareSDKPlatforms/FacebookAccount'
+pod 'FBRetainCycleDetector', { :git => 'https://github.com/facebook/FBRetainCycleDetector.git', :commit => '32c4afc1' }
+pod 'FBAllocationTracker'
+
+post_install do |installer|
+  fix_deployment_target(installer)
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+      config.build_settings['ARCHS'] = 'arm64'
+      config.build_settings["DEVELOPMENT_TEAM"] = "YDJE97CX57"
+    end
+  end
+end
+
+def fix_deployment_target(pod_installer)
+  if !pod_installer
+    return
+  end
+  puts "Make the pods deployment target version the same as our target"
+  
+  project = pod_installer.pods_project
+  deploymentMap = {}
+  project.build_configurations.each do |config|
+    deploymentMap[config.name] = config.build_settings['IPHONEOS_DEPLOYMENT_TARGET']
+  end
+  # p deploymentMap
+  
+  project.targets.each do |t|
+    puts "  #{t.name}"
+    t.build_configurations.each do |config|
+      oldTarget = config.build_settings['IPHONEOS_DEPLOYMENT_TARGET']
+      newTarget = deploymentMap[config.name]
+      if t.name == "Alamofire" || t.name == "CocoaMQTT"
+        newTarget = "9.0"
+      end
+      if oldTarget == newTarget
+        next
+      end
+      puts "    #{config.name} deployment target: #{oldTarget} => #{newTarget}"
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = newTarget
+    end
+  end
+end
+
+
+
+
+

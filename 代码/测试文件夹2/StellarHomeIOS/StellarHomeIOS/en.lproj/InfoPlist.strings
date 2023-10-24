@@ -1,0 +1,13 @@
+/* 
+  InfoPlist.strings
+  StellarHomeIOS
+
+  Created by Sansi Mac on 2020/1/10.
+  Copyright © 2020 don. All rights reserved.
+*/
+{
+    "NSCameraUsageDescription" = "Users can take photos to modify avatars";
+    "NSPhotoLibraryUsageDescription" = "Users can access your album and select photos to modify avatars";
+    "NSLocationWhenInUseUsageDescription" = "For detect Wi-Fi on iOS 13 or later to add devices";
+//    "NSLocationUsageDescription" = "For detect Wi-Fi on iOS 13 or later";
+}

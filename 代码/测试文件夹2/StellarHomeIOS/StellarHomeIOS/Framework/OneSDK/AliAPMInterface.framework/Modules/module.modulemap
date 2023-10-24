@@ -1,0 +1,6 @@
+framework module AliAPMInterface {
+  umbrella header "AliAPMInterface.h"
+
+  export *
+  module * { export * }
+}

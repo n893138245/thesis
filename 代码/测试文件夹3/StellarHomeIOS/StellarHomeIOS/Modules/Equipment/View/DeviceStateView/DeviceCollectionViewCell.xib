@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DeviceCollectionViewCellID" id="gTV-IL-0wX" customClass="DeviceCollectionViewCell" customModule="StellarHomeIOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="297" height="311"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="297" height="311"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BL1-uB-IDY">
+                        <rect key="frame" x="0.0" y="0.0" width="297" height="311"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4CV-7C-QtN">
+                        <rect key="frame" x="0.0" y="0.0" width="297" height="298"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="语音网关" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2A-CM-jXT">
+                        <rect key="frame" x="12" y="19" width="213" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设备在线" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqH-g0-SUl">
+                        <rect key="frame" x="12" y="40" width="213" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4BP-TJ-cEj">
+                        <rect key="frame" x="247" y="261" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="7pL-mh-CGp"/>
+                            <constraint firstAttribute="width" constant="50" id="xz2-lW-93X"/>
+                        </constraints>
+                        <state key="normal" image="battery_switch"/>
+                        <connections>
+                            <action selector="powerClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="gpg-aS-yIT"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aE5-mO-aaI">
+                        <rect key="frame" x="12" y="272.5" width="45" height="20.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="卧室" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlQ-75-4NA">
+                                <rect key="frame" x="5" y="3" width="35" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="3Op-7W-aMt"/>
+                            <constraint firstAttribute="bottom" secondItem="LlQ-75-4NA" secondAttribute="bottom" constant="3" id="PYu-aU-kaJ"/>
+                            <constraint firstAttribute="trailing" secondItem="LlQ-75-4NA" secondAttribute="trailing" constant="5" id="SJC-pI-xCM"/>
+                            <constraint firstItem="LlQ-75-4NA" firstAttribute="top" secondItem="aE5-mO-aaI" secondAttribute="top" constant="3" id="oY6-34-zBs"/>
+                            <constraint firstItem="LlQ-75-4NA" firstAttribute="leading" secondItem="aE5-mO-aaI" secondAttribute="leading" constant="5" id="reE-9X-fne"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gateway_icon" translatesAutoresizingMaskIntoConstraints="NO" id="IED-ux-LeD">
+                        <rect key="frame" x="237" y="16" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="48" id="aII-X4-zSI"/>
+                            <constraint firstAttribute="height" constant="48" id="tQ7-bM-W6R"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="BL1-uB-IDY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="146-ga-4Q0"/>
+                <constraint firstItem="K2A-CM-jXT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="5Ip-sz-c81"/>
+                <constraint firstAttribute="bottom" secondItem="aE5-mO-aaI" secondAttribute="bottom" constant="18" id="Fta-QF-EDJ"/>
+                <constraint firstAttribute="trailing" secondItem="4BP-TJ-cEj" secondAttribute="trailing" id="Gag-wh-Z5d"/>
+                <constraint firstItem="BL1-uB-IDY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="T0t-hj-cha"/>
+                <constraint firstItem="JqH-g0-SUl" firstAttribute="top" secondItem="K2A-CM-jXT" secondAttribute="bottom" constant="3" id="V59-WC-4n5"/>
+                <constraint firstAttribute="bottom" secondItem="4BP-TJ-cEj" secondAttribute="bottom" id="a26-EC-Zi9"/>
+                <constraint firstItem="IED-ux-LeD" firstAttribute="leading" secondItem="K2A-CM-jXT" secondAttribute="trailing" constant="12" id="caD-Fv-y5m"/>
+                <constraint firstItem="IED-ux-LeD" firstAttribute="leading" secondItem="JqH-g0-SUl" secondAttribute="trailing" constant="12" id="f0g-6R-7It"/>
+                <constraint firstAttribute="trailing" secondItem="BL1-uB-IDY" secondAttribute="trailing" id="h53-Gn-Q28"/>
+                <constraint firstItem="K2A-CM-jXT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="19" id="jO9-JP-SnK"/>
+                <constraint firstItem="JqH-g0-SUl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="jlt-6J-prw"/>
+                <constraint firstAttribute="trailing" secondItem="IED-ux-LeD" secondAttribute="trailing" constant="12" id="mED-Yt-jM7"/>
+                <constraint firstItem="aE5-mO-aaI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="mKe-ST-LUF"/>
+                <constraint firstAttribute="bottom" secondItem="BL1-uB-IDY" secondAttribute="bottom" id="th3-ls-svx"/>
+                <constraint firstItem="IED-ux-LeD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="weq-1c-U7k"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="297" height="311"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="batteryButton" destination="4BP-TJ-cEj" id="vrr-L1-Gbm"/>
+                <outlet property="bgView" destination="BL1-uB-IDY" id="6Mr-mC-aTV"/>
+                <outlet property="deviceImageView" destination="IED-ux-LeD" id="rE3-Jp-P1d"/>
+                <outlet property="deviceLabel" destination="K2A-CM-jXT" id="Bhx-Xx-oTh"/>
+                <outlet property="onlineLabel" destination="JqH-g0-SUl" id="7bU-Hw-zKj"/>
+                <outlet property="roomBgView" destination="aE5-mO-aaI" id="tFH-mu-7Te"/>
+                <outlet property="roomLabel" destination="LlQ-75-4NA" id="sbd-vc-qm3"/>
+                <outlet property="roomNameBgViewWidthConstraint" destination="3Op-7W-aMt" id="5CW-oM-i6S"/>
+                <outlet property="showAnimationView" destination="4CV-7C-QtN" id="zJb-SA-Atm"/>
+            </connections>
+            <point key="canvasLocation" x="-180.43478260869566" y="112.16517857142857"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="battery_switch" width="33" height="33"/>
+        <image name="gateway_icon" width="16" height="16"/>
+    </resources>
+</document>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NoCustomSmartView" customModule="StellarHomeIOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="427" height="670"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_smart_none" translatesAutoresizingMaskIntoConstraints="NO" id="s7N-g0-5BM">
+                    <rect key="frame" x="82" y="120" width="263" height="173"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="s7N-g0-5BM" secondAttribute="height" multiplier="210:138" id="bJ5-ig-gSo"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dF5-0y-i5v">
+                    <rect key="frame" x="192.5" y="317" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uee-IA-vnj">
+                    <rect key="frame" x="192.5" y="346" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="s7N-g0-5BM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="82" id="P31-ag-r95"/>
+                <constraint firstItem="dF5-0y-i5v" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Q1o-yt-Pp9"/>
+                <constraint firstAttribute="trailing" secondItem="s7N-g0-5BM" secondAttribute="trailing" constant="82" id="X19-Sh-k4j"/>
+                <constraint firstItem="s7N-g0-5BM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="120" id="Xab-XZ-qdr"/>
+                <constraint firstItem="Uee-IA-vnj" firstAttribute="top" secondItem="dF5-0y-i5v" secondAttribute="bottom" constant="8" id="fJ4-a3-0Ed"/>
+                <constraint firstItem="dF5-0y-i5v" firstAttribute="top" secondItem="s7N-g0-5BM" secondAttribute="bottom" constant="24" id="sRx-DU-0mc"/>
+                <constraint firstItem="Uee-IA-vnj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xe0-aa-fQ9"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bottomLabel" destination="Uee-IA-vnj" id="aIE-at-0Nx"/>
+                <outlet property="minddleLabel" destination="dF5-0y-i5v" id="mRf-9m-97C"/>
+            </connections>
+            <point key="canvasLocation" x="147.10144927536234" y="169.41964285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_smart_none" width="210" height="138"/>
+    </resources>
+</document>

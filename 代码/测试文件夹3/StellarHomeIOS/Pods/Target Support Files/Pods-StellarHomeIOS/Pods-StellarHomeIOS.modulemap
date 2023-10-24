@@ -1,0 +1,6 @@
+framework module Pods_StellarHomeIOS {
+  umbrella header "Pods-StellarHomeIOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

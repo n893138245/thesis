@@ -1,0 +1,6 @@
+framework module AliCloudNetworkMonitor {
+  umbrella header "AliCloudNetworkMonitor.h"
+
+  export *
+  module * { export * }
+}
